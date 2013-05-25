@@ -1,0 +1,37 @@
+##
+##
+
+background yes
+imlib_cache_size 0
+use_xft yes
+xftfont Sans :size=4
+xftalpha 0.9
+update_interval 1.0
+total_run_times 0
+mpd_port 6600
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+border_margin 2
+default_color ddd
+color1 777
+# default_color 2a2a2a
+# color1 ddd
+alignment top_left
+gap_x 5
+gap_y 3
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale yes
+default_bar_size 3 3
+
+TEXT
+${if_match ${desktop}==1}${color1}${endif}${execbar echo 100}${color}${offset 3}${if_match ${desktop}==2}${color1}${endif}${execbar echo 100}${color}
+${if_match ${desktop}==3}${color1}${endif}${execbar echo 100}${color}${offset 3}${if_match ${desktop}==4}${color1}${endif}${execbar echo 100}${color}

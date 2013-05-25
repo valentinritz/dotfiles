@@ -19,5 +19,6 @@ Dotfiles that I want to share, (and that I don't want to lose)
 ##Uploaded settings
 
 - TillSummer, a 2px windows decoration for xfwm4. Inspired by Zenburn for awesomewm.
+- conky, I use it as my panel.
 
 ... more to come
