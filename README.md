@@ -1,6 +1,5 @@
-Dotfiles that I want to share, (and that I don't want to lose)
-
 ![Desktop](http://gniii.org/file/desktop.png)
+Fonts are Pragamata and Open Sans. [Wallpaper link](http://wallbase.cc/similar/2607). And image is frome [There will be blood](http://www.imdb.com/title/tt0469494/) (an awesome movie!).
 
 ##Setup and most used apps
 
@@ -11,6 +10,8 @@ Dotfiles that I want to share, (and that I don't want to lose)
   - snownews
   - earthquake
 - gVim
+  - molokai theme
+  - powerline
 - Thunar
 - zathura
 - inkscape
