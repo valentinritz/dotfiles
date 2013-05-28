@@ -42,7 +42,7 @@ ${if_match "${battery_percent BAT1}" >= "11" }${image ~/.conky/bat20.png -s 16x1
 ${if_match "${battery_percent BAT1}" >= "0"  }${image ~/.conky/bat10.png -s 16x16 -p  35x1}${endif}${endif}${endif}${endif}${endif}
 
 #Battery widget, when connected to AC
-${if_match "${acpiacadapter ACAD}" != "off-line" }${image /home/valentin/.conky/batcharg.png -s 16x16 -p 35x1}${else}${image /home/valentin/.conky/none.png -s 16x16 -p 35x1}${endif}
+${if_match "${acpiacadapter ACAD}" != "off-line" }${image ~/.conky/batcharg.png -s 16x16 -p 35x1}${else}${image ~/.conky/none.png -s 16x16 -p 35x1}${endif}
 
 #Wifi widget
 ${if_match "${wireless_link_qual_perc wlan0}" >= "86" }${image ~/.conky/signal100.png -s 16x16 -p 19x1}${else}
