@@ -7,6 +7,7 @@ Fonts are Pragamata and Open Sans. [Wallpaper link](http://wallbase.cc/similar/2
 - xfce
 - Firefox (nightly)
 - xfce4-terminal
+  - zsh
   - snownews
   - earthquake
 - gVim

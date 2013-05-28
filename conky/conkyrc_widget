@@ -35,12 +35,11 @@ template2 -p 350x0
 TEXT
 
 #Battery widget
-${if_match "${battery_percent BAT1}" = "100" }${image ~/.conky/bat90.png -s 16x16 -p 35x1}${else}
 ${if_match "${battery_percent BAT1}" >= "81" }${image ~/.conky/bat90.png -s 16x16 -p 35x1}${else}
 ${if_match "${battery_percent BAT1}" >= "58" }${image ~/.conky/bat50.png -s 16x16 -p 35x1}${else}
 ${if_match "${battery_percent BAT1}" >= "35" }${image ~/.conky/bat30.png -s 16x16 -p 35x1}${else}
 ${if_match "${battery_percent BAT1}" >= "11" }${image ~/.conky/bat20.png -s 16x16 -p 35x1}${else}
-${if_match "${battery_percent BAT1}" >= "0"  }${image ~/.conky/bat10.png -s 16x16 -p  35x1}${endif}${endif}${endif}${endif}${endif}${endif}
+${if_match "${battery_percent BAT1}" >= "0"  }${image ~/.conky/bat10.png -s 16x16 -p  35x1}${endif}${endif}${endif}${endif}${endif}
 
 #Wifi widget
 ${if_match "${wireless_link_qual_perc wlan0}" >= "86" }${image ~/.conky/signal100.png -s 16x16 -p 19x1}${else}
