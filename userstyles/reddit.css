@@ -17,6 +17,9 @@
 
 /* PSS : Don't forget to disable the style of other subreddit!
  * To do so : preferences > display options > disable "allow subreddits to show me custom styles"
+ *
+ * PSSS : Also, it's better to display the thumbnail in all subreddit.
+ *        preferences > media > show thumbnails next to links
  */
 
 /* body */
@@ -125,9 +128,12 @@ Header + navigation
     padding-left:10px !important;
     height:30px !important;
     top:0px !important;
-
-
 }
+.pagename{
+    color:white !important;
+    font-weight:normal !important;
+}
+
 .tabmenu{
     margin:-23px 0px 0px 160px !important;
     display:block !important
@@ -341,7 +347,31 @@ margin-top :65px !important;
     display: none !important;
 }
 
-/*Is part is basically a copy pasta of the reddit style of /u/falac */
+/*InfoBar*/
+
+.content .infobar{
+    margin-left:27px !important;
+}
+
+.infobar{
+    border: 1px solid rgb(251, 231, 108) !important;
+    border-radius:3px;
+    background : #fcf0a6!important; 
+
+}
+.content .infobar .md{
+    padding-left:10px !important
+}
+.content .infobar .md:before{
+    content:"!";
+    float:left;
+    margin:5px 10px 0 0;
+    font-size:16px;
+    font-family:sans-serif;
+    font-weight:bold
+}
+
+/*This part is basically a copy pasta of the reddit style of /u/falac */
 /* links */
 
 .link {
@@ -369,8 +399,9 @@ margin-top :65px !important;
 }
 
 .link .title {
-    font-weight: bold !important;
+    font-weight: normal !important;
     margin-left: 0px !important;
+    font-size : 13px !important;
 }
 
     .lk .thumbnail {
@@ -390,7 +421,7 @@ margin-top :65px !important;
     }
      
     .thing .title.loggedin, .thing.p.title a {
-            color: #677996 !important;
+            color: #777 !important;
             line-height: 14px !important;
             text-indent: 155px;
             text-shadow: none !important;
@@ -406,7 +437,7 @@ margin-top :65px !important;
 
         .thing .title.loggedin:visited {
             box-shadow: none !important;
-            color: #677996 !important;
+            color: #777 !important;
         }
         
         .domain, .domain a {
