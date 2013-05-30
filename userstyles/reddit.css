@@ -13,13 +13,8 @@
  * If you like this userstyle, Go check them out! ;)
  * */
 
-/* PS : I don't think, this style work with RES :( .*/
-
-/* PSS : Don't forget to disable the style of other subreddit!
- * To do so : preferences > display options > disable "allow subreddits to show me custom styles"
- *
- * PSSS : Also, it's better to display the thumbnail in all subreddit.
- *        preferences > media > show thumbnails next to links
+/* PS : Don't forget to read the installation instructions here :
+ * https://github.com/octomwm/dotfiles/tree/master/userstyles
  */
 
 /* body */
@@ -244,7 +239,9 @@ Header + navigation
     color: #646464 !important;
     background-color:transparent !important;
     padding : 0 !important;
-    border:1px solid transparent !important
+    border:1px solid transparent !important;
+    margin-right:30px !important;
+    text-align:justify
 }
 
 .panestack-title {
@@ -430,14 +427,9 @@ margin-top :65px !important;
             font-weight:normal !important;
     }
        
-        .thing .title.loggedin:hover, .link .title:hover {
-            color: #444 !important;
-            transition: 0.5s color ease;
-        }
-
-        .thing .title.loggedin:visited {
-            box-shadow: none !important;
-            color: #777 !important;
+        .thing .title.loggedin:visited, .link .title a:visited {
+            color: #bbb !important;
+            transiti on-duration: 0.4s;
         }
         
         .domain, .domain a {
@@ -486,7 +478,7 @@ margin-top :65px !important;
     width:30px !important;
     height:30px!important;
     position:absolute;
-    margin: -24px 5px 2px -85px !important;
+    margin: -20px 5px 2px -85px !important;
     padding: 5px 20px 20px 20px !important;
     cursor:pointer !important
 
@@ -554,10 +546,20 @@ a.author:hover, a .author:hover {
 .over18 {
   border-left:5px solid rgb(247, 184, 150) !important
 }
-/*Don't show the nsfw thumbnail*/
-.nsfw{
-    display:none
+
+/* Since this theme requires to enable all thumbnail,
+ * I desided to hide the NSFW thumbnail by reducing
+ * theire opacity.
+ * If you don't like this option, you should delete
+ * these two lines :
+ */
+.over18 .thumbnail{
+    opacity:0.15
 }
+.over18 .thumbnail:hover{
+    opacity:1
+}
+
 /*I tweeked a bit the rank number, If you want to use it, delete the display:none line*/
 .rank {
     margin-left:11px;
@@ -574,6 +576,16 @@ a.author:hover, a .author:hover {
     display:none
 }
 
+/*Footer*/
+
+.col:nth-child(4) > ul:nth-child(1) > li:nth-child(1){
+    color:transparent !important;
+}
+
+.col:nth-child(4) > ul:nth-child(1) > li:nth-child(1):before{
+    color:#cc9999 !important;
+    content: "❤";
+}
 
 /*
 ====================
