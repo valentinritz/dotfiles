@@ -1,4 +1,4 @@
-#Reddit userstyle - ALPHA
+#Reddit userstyle - BETA
 
 ![reddit](http://gniii.org/img/reddit2.png)
 
@@ -17,6 +17,6 @@ This style is, more or less, a port of the Stilig Style for 4chan (https://githu
 
 ##Installation
 
-- in reddit, go to : preferences > display options > disable "allow subreddits to show me custom styles", check "show thumbnails next to links" in the media section
+- in reddit, go to : preferences > display options > disable "allow subreddits to show me custom styles", check "show thumbnails next to links" in the media section (and if you have some NSFW subreddit, uncheck the "make safe(r) for work" option)
 - install Stylish for Firefox (https://addons.mozilla.org/fr/firefox/addon/stylish)
 - create a blank style and paste this style.
