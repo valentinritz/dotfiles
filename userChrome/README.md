@@ -6,7 +6,7 @@ This style is a fork of the firefox theme of Neynt (https://github.com/Neynt/dot
 
 ##Informations :
 
-- compatible with LessChromeHD (https://addons.mozilla.org/en-US/firefox/addon/prospector-lessChrome-HD)
+- compatible with LessChromeHD (https://addons.mozilla.org/en-US/firefox/addon/prospector-lessChrome-HD). If you don't use this addons go read the comment on lign 92.
 
 ##Warning :
 

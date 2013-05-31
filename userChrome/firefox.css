@@ -11,8 +11,6 @@
     margin-top:0px !important
 }
 
-
-
 #go-button,
 #star-button,
 .tab-close-button,
@@ -85,14 +83,20 @@
 
 #nav-bar{
 background-image : linear-gradient(#f1f1f1, #ddd) !important;
-height:20px !important;
-marg in-bottom:0px
+height:10px !important;
+}
+#main-window:not([disablechrome]) #navigator-toolbox[tabsontop="true"] {
+    bor der-bottom: 0px threedshadow !important;
 }
 
+/* If you don't use LesschromeHD change theses values :
+ * margin-top = 0 !important;
+ * height:20px !important;
+ */
 #urlbar{
-    height: 20px !important;
-    margin-top:0px !important;
-    margin-bottom:0px !important;
+    height: 19px !important;
+    margin-top:-1px !important;
+    margin-bottom:-0px !important;
     font-size: 12px !important;
     -moz-appearance: none !important;
     border-left: 1px solid #aaa !important;
