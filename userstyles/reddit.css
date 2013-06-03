@@ -241,6 +241,8 @@ Header + navigation
     z-index: 1000 !important;
     transition-duration:0.4s !important;
     top: 30px !important;
+    overflow-y:scroll !important;
+    height:100% !important;
 }
 
 .side::before {

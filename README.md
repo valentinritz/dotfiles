@@ -23,6 +23,6 @@ Fonts are Pragamata and Open Sans. [Wallpaper link](http://wallbase.cc/similar/2
 - TillSummer, a 2px windows decoration for xfwm4. Inspired by Zenburn for awesomewm.
 - conky, I use it as my panel.
 - Firefox theme
-  - reddit theme
+- reddit theme
 
 ... more to come
