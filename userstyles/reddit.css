@@ -241,7 +241,7 @@ Header + navigation
     z-index: 1000 !important;
     transition-duration:0.4s !important;
     top: 30px !important;
-    overflow-y:scroll !important;
+    overflow-y:auto !important;
     height:100% !important;
 }
 
@@ -345,7 +345,6 @@ Header + navigation
     display: none !important;
     color: black !important;
     font-family: "Open Sans", sans-serif !important;
-    font- size: 1em !important;
     text-align: center !important;
     width: 100% !important;
     position: absolute;
@@ -407,7 +406,6 @@ Content
 */
 
 .content {
-width:calc(100%-155px) !important;
 margin-left:155px !important;
 margin-top :65px !important;
 }
@@ -481,7 +479,7 @@ margin-top :65px !important;
 
         .link .thumbnail img {
             border: none!important;
-            box-shadow: rgba(0,0,0,0.2) 0 0 8px !important;
+
             width: auto !important;
             margin-right: 3px !important;
         }
@@ -502,7 +500,6 @@ margin-top :65px !important;
        
         .thing .title.loggedin:visited, .link .title a:visited {
             color: #bbb !important;
-            transiti on-duration: 0.4s;
         }
         
         .domain, .domain a {
@@ -561,9 +558,37 @@ margin-top :65px !important;
     color:#fff;
     text-shadow:0 0 3px #000
 }
+.self .expando-button {
+    background-image: url("") !important;
+    background:transparent !important;
+    width:1em !important;
+    height:1em!important;
+    position:static !important;
+    margin: 7px 7px 0 0 !important;
+    padding: 0px !important;
+    cursor:pointer !important
+
+}
+.self .expando-button.selftext.collapsed::before {
+    content :"[+]";
+    font-size:1em !important;
+    color:#777;
+    text-shadow:0 0 0px #fff
+}
+
+.self .expando-button.selftext.expanded::before {
+    content :"[-]";
+    font-size:1em !important;
+    color:#777;
+    text-shadow:0 0 0px #fff
+}
+/*
+If you don't want to display the text of redditor's posts
+Uncomment this line :*/
+/*
 .self .expando-button{
     display:none
-}
+}*/
 
 .organic-listing .nextprev, .organic-listing .help {
     display: none !important;
