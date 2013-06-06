@@ -24,5 +24,6 @@ Fonts are Pragamata and Open Sans. [Wallpaper link](http://wallbase.cc/similar/2
 - conky, I use it as my panel.
 - Firefox theme
 - reddit theme
+- wikipedia theme
 
 ... more to come

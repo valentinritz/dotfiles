@@ -1,0 +1,49 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("wikipedia.org") {
+
+#p-navigation,
+#p-interaction,
+#p-tb,
+#p-coll-print_export,
+#p-Contribuer,
+#p-Mitmachen,
+#p-lang li,
+#toctitle{
+    display:none !important
+}
+
+#p-lang li.interwiki-fr,
+#p-lang li.interwiki-en,
+#p-lang li.interwiki-de{
+    display:block !important
+}
+
+.vector-animateLayout #mw-panel {
+    position: fixed !important;
+    width:300px !important;
+}
+
+.toc {
+    position: fixed !important;
+    left: 5px !important;
+    top: 250px !important;
+    width: 200px !important;
+    border: 1px solid #ccc !important;
+}
+
+#toc ul, .toc ul{
+    max-height: 450px !important;
+    overflow: scroll !important;
+}
+
+#content {
+    margin-left: 210px !important;
+}
+#left-navigation {
+    left: 210px !important;
+}
+.mw-content-ltr .toc ul ul, .mw-content-ltr #toc ul ul, .mw-content-rtl .mw-content-ltr .toc ul ul, .mw-content-rtl .mw-content-ltr #toc ul ul {
+    margin: 0px 0px 0px 1em !important;
+}
+}
