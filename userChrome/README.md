@@ -15,5 +15,6 @@ This style is a fork of the firefox theme of Neynt (https://github.com/Neynt/dot
 
 ##Installation
 
+- in firefox : preferences > Toolbar layout > use small icons
 - install Stylish for Firefox (https://addons.mozilla.org/fr/firefox/addon/stylish)
 - create a blank style and paste this style.

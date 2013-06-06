@@ -7,15 +7,19 @@ This style is, more or less, a port of the Stilig Style for 4chan (https://githu
 ##Informations :
 
 - the sidebar is available, when you hover the icon on the top-right.
-- some plugins are perfectly implemented with this style (CRU, NSFW toggle, view images)
+- some userscripts are perfectly implemented with this style (CRU, NSFW toggle, view images, etc.)
 - NSFW links are showns with a red border on the left. SFW are blue.
+- works with firefox, opera and chromium
 
 ##Warning :
 
 - I didn't tested this style with RES enabled. So it might not work with this plugin.
-- I didn't tested this style with chromium and opera.
 
 ##Installation
+
+The easyest way (and with more options) is to go to userstyle.org : http://userstyles.org/styles/88599/reddit-stilig-mod
+
+The hard way is :
 
 - in reddit, go to : preferences > display options > disable "allow subreddits to show me custom styles", check "show thumbnails next to links" in the media section (and if you have some NSFW subreddit, uncheck the "make safe(r) for work" option)
 - install Stylish for Firefox (https://addons.mozilla.org/fr/firefox/addon/stylish)
