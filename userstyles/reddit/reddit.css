@@ -140,9 +140,6 @@ Header + navigation
     color:#aaa !important
 }
 
-#sr-header-area .selected:after {
-    content:" +";
-}
 .drop-choices {
     border: 0px solid transparent !important;
     box-shadow: rgba(0,0,0,0.25) 0 0 5px !important;
@@ -218,6 +215,7 @@ Header + navigation
     top:4px !important;
     margin-right:40px !important;
     font-size:10px !important;
+    height:30px !important;
 }
 #header-bottom-right a{
     color:#aaa !important;
@@ -269,7 +267,11 @@ Header + navigation
 
 .side:hover {
     position: fixed !important;
-    right: -15px !important;
+    right: -20px !important;
+}
+
+.link.promotedlink, .organic-listing, #ad_main {
+    display: none !important;
 }
 
 .sidebox .subtitle {
@@ -324,7 +326,7 @@ Header + navigation
 }
 
 .commentarea {
-    width: 100% !important;
+    margin-left:20px !important;
 }
 
 .titlebox h1 {
@@ -409,9 +411,9 @@ margin-left:155px !important;
 margin-top :65px !important;
 }
 
-/*no ads*/
-.link.promotedlink, .organic-listing, #ad_main {
-    display: none !important;
+.sidecontentbox .content {
+margin-left:0px !important;
+margin-top :0px !important;
 }
 
 /*InfoBar*/
@@ -449,13 +451,6 @@ margin-top :65px !important;
     position: relative !important;
     background: transparent !important;
     border-bottom: none !important;
-}
-
-.link.promotedlink, .organic-listing .link, .organic-listing .link.promotedlink,.organic-listing .promoted,.organic-listing {
-    padding: 12px 0px !important;
-    margin-bottom: -10px !important;
-    border-left: none !important;
-    border-right: none !important;
 }
 
 .link.last-clicked {
@@ -663,7 +658,7 @@ a.author:hover, a .author:hover {
 }
 .over18 .thumbnail:hover{
     opacity:1
-};
+}
 
 /*I tweeked a bit the rank number, If you want to use it, delete the display:none line*/
 .rank {
@@ -690,11 +685,6 @@ a.author:hover, a .author:hover {
 .col:nth-child(4) > ul:nth-child(1) > li:nth-child(1):before{
     color:#cc9999 !important;
     content: "❤";
-}
-/*manage your sureddit page*/
-
-.sr-interest-bar {
-    margin-left: 20px !important;
 }
 
 /*
@@ -731,5 +721,106 @@ margin:0 10px 0 30px !important
 }
 .search-page .pagename{
     color:white !important;
+}
+.message .md {
+    font-size:13px !important
+}
+/*Reddit Gold*/
+.error, .gold-form .roundfield{
+    margin-left:30px !important
+}
+
+.flat-list li a.gold {
+    font-weight:normal !important
+}
+.rounded {
+    border-radius: 3px !important;
+}
+.gold-accent.comment-visits-box{
+    margin-left:10px !important
+}
+.new-comment .usertext-body{
+    margin-top:5px !important;
+    padding-left: 5px !important;
+}
+
+/*Reddit BETA*/
+
+.with-listing-chooser  .tabmenu{
+    margin:-10px 0px 0px 160px !important;
+}
+
+#beta-settings{
+    margin-left: auto !important;
+    margin-left: auto !important
+}
+.beta-notice {
+    top: -27px !important;
+    right: 25px !important;
+    z-index: 10 !important;
+    display:block !important
+}
+.listing-chooser {
+    top: 30px !important;
+    margin-left:160px !important;
+    display:block !important;
+    position:fixed !important;
+    z-index:100;
+    box-shadow:1px 0px 3px rgba(0,0,0,0.25) !important;
+    border-right:0px solid transparent !important;
+    padding-right:0px !important
+}
+.listing-chooser:after{
+    box-shadow:0px 0 0px 0px transparent inset !important;
+}
+body.with-listing-chooser.listing-chooser-collapsed .listing-chooser{
+    opacity:0;
+}
+.with-listing-chooser #sr-header-area .dropdown .selected:after {
+    content:" +";
+    left: 125px;
+    top:30px;
+    width: 24px;
+    height: 28px;
+    display:block;
+    position: fixed;  
+    border-left: 1px solid #ddd !important;
+    background:#eee !important;
+    font-size:2em;
+    padding:6px 0 0 9px;
+}
+.grippy {
+    position: fixed !important;
+    left: 120px !important;
+    display: block !important;
+    width: 35px !important;
+    height: 35px !important;
+    border: 0px solid transparent !important;
+    background:transparent !important
+}
+.grippy:after {
+    border:0px solid transparent !important
+}
+.with-listing-chooser {
+    margin-left:-14px !important
+}
+.with-listing-chooser #sr-header-area .width-clip {
+    margin-top: 32px !important;
+    margin-bottom :0px !important
+}
+.with-listing-chooser #sr-header-area {
+    bottom :0px !important
+}
+.hover-bubble.multi-add-notice{
+    top: 50px !important;
+    right: 0px !important;
+    margin-right: 20px !important;
+}
+.anchor-right{
+    z-index:2000 !important;
+}
+.multi-page .anchor-right{
+    z-index:1 !important;
+}
 }
 }
