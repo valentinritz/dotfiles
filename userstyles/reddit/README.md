@@ -6,7 +6,7 @@
 This style is, more or less, a port of the Stilig Style for 4chan (https://github.com/RiDeag/Stilig). This userstyle is also based on the userstyle for reddit by falac (https://github.com/phallus/user-styles/tree/master/styles-clean). If you like this userstyle, Go check them out! ;)
 
 ###reddit2.css - ALPHA
-![reddit](http://gniii.org/img/reddit2.png)
+![reddit](http://gniii.org/img/reddit3.png)
 This is my current style. It is an evolution of the previous one, it's lighter and cleaner IMO.
 
 ##Informations :
