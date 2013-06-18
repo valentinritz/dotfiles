@@ -15,7 +15,11 @@
  * https://github.com/octomwm/dotfiles/tree/master/userstyles
  */
 
-/* body */
+/*
+====================
+General
+====================
+*/
 
 body {
     width: 99% !important;
@@ -89,22 +93,7 @@ Header + navigation
 
 #sr-header-area .separator, #sr-more-link{
     display:none !important
-}/*
-#header-img{
-    width:60px !important;
-    height:30px !important;
-    display:block !important;
-    overflow:hidden;
-    position:absolute !important;
 }
-#header-img:before{
-    content:"reddit /";
-    height:30px;
-    display:block;
-    font-size: 1.5em;
-    padding:3px 0 0 3px;
-    color:white;
-}*/
 #header-img.default-header {
     background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYFCQ8Wpncy0gAAAA1JREFUCNdjYGBgYAAAAAUAAV7zKjoAAAAASUVORK5CYII=") !important;
     height:28px !important;
@@ -142,8 +131,6 @@ Header + navigation
     padding:33px 1em !important;
     margin-left: -300px !important;
     display:block !important;
-/*I don't know why, but the transition is laggy for the moment :/ */ 
-/*    transition-duration:0.4s !important;*/
 }
 .drop-choices.srdrop.inuse{
     left:460px !important;
@@ -216,24 +203,24 @@ Header + navigation
     position:fixed !important;
     font-size:11px !important;
 }
-.pagename{
-    word-wrap: break-word;
-    max-width:20px !important
+.profile-page .pagename, .search-page .pagename{
+    margin-left:60px;
+    height:26px;
+    padding:4px 0 0 0;
+    position:absolute;
+    font-size:1.5em !important;
+    color:white
 }
-.redditname{
-    height:30px !important
-}
+
 .redditname a{
     color:white !important;
-    font-size : 1.5em !important;
-    font-weight:normal !important;
-    margin-left:60px !important;
-    height:30px !important;
-    top:0px !important;
+    font-size : 1.5em;
+    font-weight:normal;
+    margin:1px 0 0 60px;
+    position:absolute;
 }
-.pagename{
+.redditname{
     color:white !important;
-    font-weight:normal !important;
 }
 
 .tabmenu{
@@ -422,35 +409,35 @@ Header + navigation
     text-align: center !important;
 }
 
-    .linkinfo .date {
-        font-family: "Open Sans", sans-serif !important;
-    }
+.linkinfo .date {
+    font-family: "Open Sans", sans-serif !important;
+}
     
-    .linkinfo .score .word {
-        font-family: "Open Sans", sans-serif !important;
-        font-size: 1.4em !important;
-        font-weight: bold;
-        color: #1c1c1c !important;
-    }
+.linkinfo .score .word {
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 1.4em !important;
+    font-weight: bold;
+    color: #1c1c1c !important;
+}
 
-    .linkinfo .score .number {
-        font-size: 1.4em !important;
-        font-weight: bold;
-        color: #1c1c1c !important;
-    }
+.linkinfo .score .number {
+    font-size: 1.4em !important;
+    font-weight: bold;
+    color: #1c1c1c !important;
+}
 
-    .linkinfo .upvotes, .linkinfo .downvotes {
-        font-family: "Open Sans", sans-serif !important;
-        font-size: 1.1em !important;
-        color: #646464 !important;
-    }
+.linkinfo .upvotes, .linkinfo .downvotes {
+    font-family: "Open Sans", sans-serif !important;
+    font-size: 1.1em !important;
+    color: #646464 !important;
+}
 
+.linkinfo .shortlink input {
+    border: 1px solid gray;
+    padding: 3px 3px;
+    width: 140px !important;
+}
 
-    .linkinfo .shortlink input {
-        border: 1px solid gray;
-        padding: 3px 3px;
-        width: 140px !important;
-    }
 /*
 ================
 Content
@@ -461,13 +448,12 @@ Content
     margin-right:auto !important;
     margin-left:auto !important;
     margin-top :55px !important;
-    border:1px solid #ddd !important;
+    padding-bottom :10px !important;
+    border-right:1px solid #ddd !important;
+    border-left:1px solid #ddd !important;
+    border-bottom:1px solid #ddd !important;
     background:white !important;
     width:1000px;
-    
-    /*
-    margin-left:180px !important;
-    margin-right:160px !important;*/
 }
 .content .spacer {
     margin-bottom: 0px !important;
@@ -476,20 +462,20 @@ Content
 .sidecontentbox .content {
     margin-left:0px !important;
     margin-top :0px !important;
+    width:287px !important;
+    border-top:1px solid #eee !important
 }
 
 /*InfoBar*/
 
-.content .infobar{
-    margin-left:27px !important;
-}
-
-.infobar{
-    border: 1px solid rgb(251, 231, 108) !important;
+.side-message, .infobar:not(.welcome){
+    border: 1px solid #e1b000 !important;
     border-radius:3px;
-    background : #fcf0a6!important; 
-
+    background : #fffdcc!important; 
+    color:#9a7d2e !important;
+    box-shadow: 0 0 0 !important
 }
+
 .content .infobar .md{
     padding-left:10px !important
 }
@@ -505,19 +491,12 @@ Content
 /*This part is basically a copy pasta of the reddit style of /u/falac */
 /* links */
 
-.link {
-    color: #444 !important;
-    min-height: 30px;
-    padding: 12px 0 !important;
-    position: relative !important;
-    background: transparent !important;
-    border-bottom: none !important;
-}
-
 .link.last-clicked {
     color: #3f3f3f !important;
-    border-right: none !important;
+    border: none !important;
     border-top: 0px dashed gray !important;
+    border-left: 0px dashed gray !important;
+    border-bottom: 1px solid #eee !important;
     background-color:#fdfdfd !important
 }
 
@@ -534,7 +513,6 @@ Content
 
 .link .thumbnail img {
     border: none!important;
-
     width: auto !important;
     margin-right: 3px !important;
     }
@@ -543,19 +521,14 @@ Content
     padding-bottom: 0px !important;
 }
      
-    .thing .title.loggedin, .thing.p.title a, .title a , p.title a.title {
-            color: #444 !important;
-            line-height: 14px !important;
-            text-indent: 155px;
-            text-shadow: none !important;
-            transition: 0.5s ease all;
-            font-size: 0.9em !important;
-            font-weight:normal !important;
-    }
+.thing .title.loggedin, .thing.p.title a, .title a , p.title a.title {
+    color: #444 !important;
+    font-size: 0.9em !important;
+}
        
-        .thing .title.loggedin:visited, .link .title a:visited {
-            color: #aaa !important;
-        }
+.thing .title.loggedin:visited, .link .title a:visited {
+    color: #aaa !important;
+}
 .domain, .domain a {
     color: transparent!important;
 }       
@@ -565,38 +538,32 @@ Content
     color: #aaa !important;
 }
     
-    .tagline {
+.tagline {
+    color: #888 !important;
+    font-size: 1em !important;
+    font-family: "Open Sans", sans-serif !important;
+    margin-top: 4px !important;
+}
+    
+.link .flat-list {
+    margin-top: 4px !important;
+    margin-left: 0px !important;
+}
 
-        color: #888 !important;
-        font-size: 1em !important;
-        font-family: "Open Sans", sans-serif !important;
-        margin-top: 8px !important;
-    }
+.entry {
+    padding-left: 10px !important;
+}
     
-    .link .flat-list {
-        margin-top: 4px !important;
-        margin-left: 2px !important;
-    }
-    
-    .entry {
-        border: none !important;
-        padding-left: 10px !important;
-    }
-    
-        .entry .buttons li a {
-            color: #999 !important;
-            font-size: 1em !important;
-            font-weight: normal !important;
-            padding: 0 10px 3px !important;
-            transition: 0.5s ease all;
-            margin-left:-10px
-        }
+.entry .buttons li a {
+    color: #777 !important;
+    font-weight: normal !important;
+    padding: 0 10px !important;
+    margin-left:-10px
+}
         
-            .entry .buttons li a:hover {
-                color: #1c1c1c !important;
-                text-decoration: none !important;
-                transition: 0.5s color ease;
-            }
+.entry .buttons li a:hover {
+    text-decoration: underline !important;
+}
 
 .expando-button.video {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYFCQ8Wpncy0gAAAA1JREFUCNdjYGBgYAAAAAUAAV7zKjoAAAAASUVORK5CYII=") !important;
@@ -607,13 +574,13 @@ Content
     margin: -20px 5px 2px -85px !important;
     padding: 5px 20px 20px 20px !important;
     cursor:pointer !important;
-
+    top:32px;
 }
 .expando-button.video.collapsed::before {
     content :"►";
     font-size:30px;
     color:#fff;
-    text-shadow:0 0 3px #000
+    text-shadow:0 0 3px #000;
 }
 .expando-button.video.expanded::before {
     content :"▇";
@@ -628,7 +595,7 @@ Content
     width:1em !important;
     height:1em!important;
     position:static !important;
-    margin: 7px 7px 0 0 !important;
+    margin: 1px 7px 0 0 !important;
     padding: 0px !important;
     cursor:pointer !important
 
@@ -637,7 +604,7 @@ Content
     content :"[+]";
     font-size:1em !important;
     color:#777;
-    text-shadow:0 0 0px #fff
+    text-shadow:0 0 0px #fff;
 }
 .expando-button.selftext.expanded::before {
     content :"[-]";
@@ -645,14 +612,6 @@ Content
     color:#777;
     text-shadow:0 0 0px #fff
 }
-/*
-If you don't want to display the text of redditor's posts
-Uncomment this line :*/
-
-/*
-.self .expando-button{
-    display:none
-}*/
 
 .organic-listing .nextprev, .organic-listing .help {
     display: none !important;
@@ -663,7 +622,7 @@ Uncomment this line :*/
 }
 
 .title {
-    color: #677996 !important;
+    color: #333 !important;
     background: none !important;
     text-align: left;
     margin-left: 2px !important;
@@ -679,21 +638,31 @@ Uncomment this line :*/
     color: #666 !important;
 }
 
-
 .tagline .submitter {
     color: #999;
 }
 /*normal posts has a blue line on the left*/
 .link {
-  border-bottom:1px solid #eee !important;
-  background: #ffffff !important;
-  border-left:10px solid #63bdd7 !important;
-  margin:0px !important;
+    border-bottom:1px solid #eee !important;
+    box-shadow: -10px 0 0 #63bdd7;
+    margin:0px !important;
+    color: #444 !important;
+    min-height: 30px;
+    padding: 12px 0 !important;
+    position: relative !important;
+    background: transparent !important;
+}
 
+.link:first-child {
+  border-top:1px solid #ddd !important;
 }
 /*the nsfw posts has a red line on the left*/
 .over18 {
-  border-left:10px solid #d87a68 !important
+    box-shadow: -10px 0 0 #d87a68 ;
+}
+.content.over18{
+    border:0px solid !important;
+    background:transparent !important
 }
 
 /* Since this theme requires to enable all thumbnail,
@@ -710,30 +679,19 @@ Uncomment this line :*/
     opacity:1
 }
 
-/*I tweeked a bit the rank number, If you want to use it, delete the display:none line*/
-.rank {
-    margin-left:11px;
-    text-align:center !important;
-    position: relative;
-    margin-left: -17px;
-    background: linear-gradient(rgb(238, 238, 238), rgb(221, 221, 221)) repeat scroll 0% 0% red;
-    padding: 5px;
-    min-height: 19px;
-    min-width: 19px;
-    border-radius: 20px;
-    background-image: linear-gradient(#eee, #ddd);
-    box-shadow: 0px 1px 2px #aaa;
-    display:none
-}
 
-/*Footer*/
+/*
+====================
+Footer
+====================
+*/
 
 .col:nth-child(4) > ul:nth-child(1) > li:nth-child(1){
     color:transparent !important;
 }
 
 .col:nth-child(4) > ul:nth-child(1) > li:nth-child(1):before{
-    color:#cc9999 !important;
+    color:#ea5252 !important;
     content: "❤";
 }
 
@@ -761,13 +719,27 @@ Scripts
     border-radius: 2px !important
 }
 
-/*Other pages*/
+/*
+====================
+Other Pages
+====================
+*/
+.profile-page .link{
+    border-bottom:0px solid #ddd !important
+}
+.profile-page .content{
+    border-top:1px solid #ddd !important
+}
+.pretty-form .content{
+    border:0px solid !important;
+    border-top:1px solid #ddd !important;
+}
 .raisedbox {
     background-color: transparent !important;
     border: 0px solid transparent !important
 }
 .searchfacets{
-margin:0 10px 0 30px !important
+    margin:0 10px 0 30px !important
 }
 .search-page .pagename{
     color:white !important;
@@ -797,7 +769,11 @@ margin:0 10px 0 30px !important
     background:transparent !important
 }
 
-/*Reddit BETA*/
+/*
+====================
+Reddit BETA
+====================
+*/
 
 .with-listing-chooser  .tabmenu{
     margin:-10px 0px 0px 160px !important;
@@ -874,5 +850,22 @@ body.with-listing-chooser.listing-chooser-collapsed .listing-chooser{
 }
 .multi-page .anchor-right{
     z-index:1 !important;
+}
+}
+
+/*
+====================
+Style specific to certain pages
+====================
+*/
+
+@-moz-document url("https://ssl.reddit.com/prefs/"),
+               url("https://ssl.reddit.com/prefs?done=true") {
+.pagename{
+    margin-left:60px;
+    height:26px;
+    padding:4px 0 0 0;
+    position:absolute;
+    font-size:1.5em !important;
 }
 }
