@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# ~/.xinitrc
+#
+# Executed by startx (run your window manager from here)
+
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+  for f in /etc/X11/xinit/xinitrc.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
+fi
+
+#set term=xterm-256color
+#set xkbmap -layout fr &
+xcape &
+#xfce4-terminal -e "/usr/bin/setxkbmap -option "ctrl:swapcaps"" &
+# xcompmgr &
+#xfdesktop &
+sudo netctl start xtra &
+firefox-nightly &
+thunderbird &
+(sleep 10s && dropboxd) &
+(sleep 10s && /usr/bin/setxkbmap -option "ctrl:swapcaps") &
+(sleep 30s && ~/.conky/conky.sh) &
+
+#exec startxfce4
+exec awesome
+# ...or the Window Manager of your choice
