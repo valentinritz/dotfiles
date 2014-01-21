@@ -27,5 +27,5 @@ Fonts are Pragamata and Open Sans. [The Wallpaper is from Petros Koublis](http:/
 
 ##Links
 
-[Website](http://gniii.org)
-[Twitter](https://twitter.com/mwatermelon)
+- [Website](http://gniii.org)
+- [Twitter](https://twitter.com/mwatermelon)
