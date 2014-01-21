@@ -1,0 +1,11 @@
+set font "PragmataPro 8"
+
+set default-fg "#ffffff"
+set default-bg "#272822"
+set statusbar-fg "#ffffff"
+set statusbar-bg "#31322c"
+
+set highlight-color "#5599cc"
+set highlight-active-color "#3377aa"
+
+set inputbar-fg "#DDDDDD"

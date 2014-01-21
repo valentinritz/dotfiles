@@ -1,0 +1,14 @@
+open_with gvim
+mkdir colourscheme
+rm colourscheme
+xfce4-terminal
+term
+
+rm
+delete
+open
+execute
+terminal
+open gimp
+gimp
+search 2013

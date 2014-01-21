@@ -1,0 +1,68 @@
+    !Colors
+
+    ! URxvt.depth: 32
+    URxvt.background: #272822
+    URxvt.foreground: #e6e6e6
+    URxvt.cursorColor: #FFFFFF
+    URxvt.cursorColor2: #252525
+    URxvt.colorIT: #444
+    URxvt.colorBD: #FFFFFF
+    URxvt.colorUL: #FF8F00
+    URxvt.colorRV: #333333
+    URxvt.underlineColor: #0E0E0E
+    URxvt.borderColor: #0E0E0E
+    URxvt.pointerColor: #000000
+    URxvt.pointerColor2: #FFFFFF
+    URxvt*internalBorder: 0
+
+    !black
+    *color0:  #272822
+    *color8:  #6C6C6C
+    !red
+    *color1:  #E11D3B
+    *color9:  #FE5520
+    !green
+    *color2:  #6DC130
+    *color10: #9FE93A
+    !yellow
+    *color3:  #FFAE26
+    *color11: #FFED3C
+    !blue
+    *color4:  #3C80EA
+    *color12: #40A7FF
+    !magenta
+    *color5:  #DE55E1
+    *color13: #953BED
+    !cyan
+    *color6:  #30B5BF
+    *color14: #3AE8CD
+    !white
+    *color7:  #FFFFFF
+    *color15: #878787
+
+
+    !Font
+
+    ! URxvt.font: xft:PragmataPro:size=7.5
+
+    URxvt.font: xft:PragmataTT:antialias=false:pixelsize=10, \
+                xft:unifont:antialias=false
+    URxvt.boldFont:xft: PragmataTT:antialias=false:style=bold:pixelsize=10, \
+                xft:unifont:antialias=false:style=bold
+
+    URxvt.italicFont:xft: PragmataTT:antialias=false:style=italic:pixelsize=10, \
+                xft:unifont:antialias=false:style=italic
+
+    !Plugin
+
+    URxvt.perl-ext-common:  default,matcher,clipboard
+    ! URxvt.perl-ext:  default,clipboard
+    URxvt.url-launcher:      /usr/bin/firefox-aurora
+    URxvt.matcher.button:   1
+
+    !general
+
+    URxvt.scrollBar: false
+    URxvt*imLocale: fr_CH.UTF-8
+    URxvt.saveLines: 5000
+    URxvt.geometry: 95x26+50+50

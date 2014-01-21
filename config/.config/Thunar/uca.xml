@@ -1,0 +1,32 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1390317204546260-5</unique-id>
+	<command>urxvt -cd %f</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>thunar-filemanager</icon>
+	<name>Ouvrir Thunar ici (root)</name>
+	<unique-id>1390317256161329-6</unique-id>
+	<command>sudo thunar %f</command>
+	<description>Ouvrir Thunar ici en root dans le dossier courant</description>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+</action>
+<action>
+	<icon>pidgin</icon>
+	<name>Trouver le sous-titre</name>
+	<unique-id>1390317740813823-10</unique-id>
+	<command>periscope -l fr -l en %F</command>
+	<description></description>
+	<patterns>*</patterns>
+	<video-files/>
+</action>
+</actions>

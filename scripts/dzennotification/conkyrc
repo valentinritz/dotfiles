@@ -1,0 +1,17 @@
+gap_x 0
+gap_y -50
+out_to_console yes
+update_interval 0.05
+total_run_times 50
+double_buffer yes
+own_window yes
+own_window_type override
+
+# ${if_match "${exec amixer get Master | grep "Mono:" | egrep -o '[+[a-z]+]'}" == "[off]"}^i(/home/valentin/.config/awesome/icons/spkrmute.xpm)^bg(\#ef3838)\
+# ${else}^i(/home/valentin/.config/awesome/icons/spkr.xpm)^bg(\#99cc55)${endif}^r(${exec /home/valentin/Apps/dzennotification/bar/vol.sh})^bg(\#231f20)\
+# ^r(${exec /home/valentin/Apps/dzennotification/bar/minvol.sh})^fg(\#ffffff)^ib(1)^p(-60;0)${exec amixer get Master | egrep -o "[0-9]+%"}
+TEXT
+
+${if_match "${exec amixer get Master | grep "Mono:" | egrep -o '[+[a-z]+]'}" == "[off]"}^i(/home/valentin/.config/awesome/icons/spkrmute44.xpm)^bg(\#ef3838)\
+${else}^i(/home/valentin/.config/awesome/icons/spkr44.xpm)^bg(\#99cc55)${endif}^r(${exec /home/valentin/Apps/dzennotification/bar/vol.sh})^bg(\#231f20)\
+^r(${exec /home/valentin/Apps/dzennotification/bar/minvol.sh})^fg(\#ffffff)^ib(1)^p(-120;0)${exec amixer get Master | egrep -o "[0-9]+%"}

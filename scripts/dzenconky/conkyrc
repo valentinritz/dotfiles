@@ -1,0 +1,23 @@
+gap_x 0
+gap_y -30
+out_to_console yes
+update_interval 0.5
+total_run_times 0
+double_buffer yes
+minimum_size 500
+own_window yes
+own_window_type override
+
+#${if_match ${battery_percent BAT0} < 10}^i(/home/valentin/.config/awesome/icons/batvide.xpm)^bg(\#ef3838)${else}^i(/home/valentin/.config/awesome/icons/bat.xpm)^bg(\#99cc55)${endif}^fg(\#ffffff) ${battery_percent BAT0}% \
+
+TEXT
+^p(0;-1)\
+^i(/home/valentin/.config/awesome/icons/work.xpm)^fg(\#ffffff)^bg(\#5599cc)^p(0;2) ${desktop} \
+^pa(+1312;1)\
+^i(/home/valentin/.config/awesome/icons/todo.xpm)^bg(\#9955cc)^p(0;2) ${exec wc -l ~/Dropbox/todo.txt | awk '{print $1}' }  ^pa(+1348;1)\
+^i(/home/valentin/.config/awesome/icons/signal.xpm)^bg(\#99cc55)^r(${exec /home/valentin/Apps/dzenconky/bar/net.sh})^bg(\#231f20)^r(${exec /home/valentin/Apps/dzenconky/bar/minnet.sh})^fg(\#ffffff)^ib(1)^p(-30;2)${wireless_link_qual_perc wlp3s0}%^pa(+1397;1)^ib(0)\
+${if_match "${exec amixer get Master | grep "Mono:" | egrep -o '[+[a-z]+]'}" == "[off]"}^i(/home/valentin/.config/awesome/icons/spkrmute.xpm)^bg(\#ef3838)\
+${else}^i(/home/valentin/.config/awesome/icons/spkr.xpm)^bg(\#99cc55)${endif}^r(${exec /home/valentin/Apps/dzenconky/bar/vol.sh})^bg(\#231f20)^r(${exec /home/valentin/Apps/dzenconky/bar/minvol.sh})^fg(\#ffffff)^ib(1)^p(-30;2)${exec amixer get Master | egrep -o "[0-9]+%"}^pa(+1446;1)^ib(0)\
+${if_match ${battery_percent BAT0} < 10}^i(/home/valentin/.config/awesome/icons/batvide.xpm)^bg(\#ef3838)\
+${else}^i(/home/valentin/.config/awesome/icons/bat.xpm)^bg(\#99cc55)${endif}^r(${exec /home/valentin/Apps/dzenconky/bar/bat.sh})^bg(\#231f20)^r(${exec /home/valentin/Apps/dzenconky/bar/minbat.sh})^fg(\#ffffff)^ib(1)^p(-30;2)${battery_percent BAT0}%^pa(+1495;1)^ib(0)\
+^i(/home/valentin/.config/awesome/icons/clock.xpm)^fg(\#ffffff)^bg(\#231f20)^p(0;2) le ${time %d} à ${time %H:%M }^r(10)^pa(0;0)^ib(1)^fg(\#000000)^r(2000x1)

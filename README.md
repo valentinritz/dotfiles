@@ -1,15 +1,20 @@
-![Desktop](http://gniii.org/file/desktop.png)
-Fonts are Pragamata and Open Sans. [Wallpaper link](http://wallbase.cc/similar/2607). And picture is from [There will be blood](http://www.imdb.com/title/tt0469494/) (an awesome movie!).
+![Desktop](http://gniii.org/file/Janv2014.png)
+Fonts are Pragamata and Open Sans. [The Wallpaper is from Petros Koublis](http://stampsy.com/5036). And picture credit ggoes to Die Antwoord.
 
-##Setup and most used apps
+[View a screencast](http://gniii.org/file/screen.gif)
+
+##Setup
 
 - archlinux
 - awesome
-- Firefox (nightly)
-- xfce4-terminal
+
+##Apps
+
+- Firefox (aurora)
+- urxvt
   - zsh
   - snownews
-  - earthquake
+  - irssi
 - gVim
   - molokai theme
   - powerline
@@ -17,13 +22,5 @@ Fonts are Pragamata and Open Sans. [Wallpaper link](http://wallbase.cc/similar/2
 - zathura
 - inkscape
 - gimp
-
-##Uploaded settings
-
-- TillSummer, a 2px windows decoration for xfwm4. Inspired by Zenburn for awesomewm.
-- conky, I use it as my panel.
-- Firefox theme
-- two reddit themes
-- wikipedia theme
-
-... more to come
+- Turpial
+- gmrun
