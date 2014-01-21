@@ -1,7 +1,7 @@
 ![Desktop](http://gniii.org/file/Janv2014.png)
 Fonts are Pragamata and Open Sans. [The Wallpaper is from Petros Koublis](http://stampsy.com/5036). And picture credit ggoes to Die Antwoord.
 
-[View a screencast](http://gniii.org/file/screen.gif)
+[View a screencast (very poor quality)](http://gniii.org/file/screen.gif)
 
 ##Setup
 
@@ -24,3 +24,8 @@ Fonts are Pragamata and Open Sans. [The Wallpaper is from Petros Koublis](http:/
 - gimp
 - Turpial
 - gmrun
+
+##Links
+
+[Website](http://gniii.org)
+[Twitter](https://twitter.com/mwatermelon)
