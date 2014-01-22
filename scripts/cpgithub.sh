@@ -6,7 +6,7 @@
 cp ~/Apps/space.sh ~/Apps/inkddg.sh ~/Apps/battery.sh ~/Apps/infos.sh ~/Apps/wifi.sh ~/Apps/cpgithub.sh -r ~/Apps/dzenconky ~/Apps/dzennotification -t ~/Documents/Github/dotfiles/scripts
 
 # save awesomewm config files to dotfiles/awesome
-cp -r ~/.config/awesome -t ~/Documents/Github/dotfiles/awesome
+cp -r ~/.config/awesome -t ~/Documents/Github/dotfiles
 
 # save gtk theme and icons to dotfiles/theme
 cp -r ~/.themes/Phosbird -t ~/Documents/Github/dotfiles/theme
