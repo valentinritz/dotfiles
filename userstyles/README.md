@@ -14,6 +14,7 @@ LessChrome.css is an userstyle that hides the locationbar for Firefox Australis.
 
 ##Reddit
 ![Reddit](http://gniii.org/file/reddit.png)
+If the screenshot isn't visible, [here is a mirror link.](http://gniii.org/file/reddit.png)
 
 ##Pinboard
 A prettier style for [pinboard.in](http://pinboard.in).
