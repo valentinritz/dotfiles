@@ -17,15 +17,16 @@ bindkey -v
 # export EDITOR="vim"
 export EDITOR="gvim"
 
-#Alias
+# PATH
+PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
 
+#Alias
 alias ink='$HOME/Apps/inkddg.sh'
 alias prompt='$HOME/Apps/infos.sh'
 # alias xtra='sudo netctl stop unifr | sudo netctl start xtra'
 # alias unifr='sudo netctl stop xtra | sudo netctl start unifr'
 
 #Theme
-
 # PROMPT="%{$fg[red]%}% %M %{$reset_color%}% %{$fg[cyan]%}% %~ %{$reset_color%}%"
 PROMPT=" %{$fg[cyan]%}% %~ %{$reset_color%}%"
 
