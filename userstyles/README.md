@@ -9,15 +9,19 @@ New Tab page is by me. Js is by [simpleweather](http://simpleweatherjs.com/).
 
 Some of theses userstyles can be found on [my userstyle page](http://userstyles.org/users/88360). Check them out ;)
 
+##LessChrome
+LessChrome.css is an userstyle that hides the locationbar for Firefox Australis. I use it as a replacement of [LessChrome HD](https://addons.mozilla.org/fr/firefox/addon/prospector-lessChrome-HD/)
+
 ##Reddit
 ![Reddit](http://gniii.org/file/reddit.png)
 
-##Wikipedia
-![Desktop](http://gniii.org/file/ddg.png)
+##Pinboard
+A prettier style for [pinboard.in](http://pinboard.in).
+Based on [Prettified](http://userstyles.org/styles/47400/pinboard-prettified)
 
 ##Gameblog
 ![Gameblog](http://gniii.org/file/gameblog.png)
 
-##Gameblog
-
-LessChrome.css is an userstyle that hides the locationbar for Firefox Australis. I use it as a replacement of [LessChrome HD](https://addons.mozilla.org/fr/firefox/addon/prospector-lessChrome-HD/)
+##Wikipedia
+![Desktop](http://gniii.org/file/ddg.png)
+(I don't use it anymore, so it won't get updated :/ )
