@@ -163,7 +163,7 @@ style "resize-grip"
 			overlay_border	= {0,0,0,0 }
 			overlay_stretch	= FALSE
 		}
-        }
+  }
 }
 
 style "paned" = "default"
@@ -177,24 +177,24 @@ style "paned" = "default"
 ### THEME MODULES ###
 
 style "dark" {
-	
+
 	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
-	
+
 	bg[NORMAL]	= @bg_color_dark
 	bg[ACTIVE]	= shade (0.7, @bg_color_dark)
 	bg[PRELIGHT]	= shade (0.7, @bg_color_dark)
 	bg[SELECTED]	= shade (0.6, @bg_color_dark)
-	
+
 	fg[NORMAL]	= @text_color_dark
 	fg[PRELIGHT]	= @text_color_dark
 	fg[ACTIVE]	= @text_color_dark
 	fg[SELECTED]	= @text_color_dark
-	
+
 	text[NORMAL]	= @text_color_dark
 	text[PRELIGHT]	= @text_color_dark
 	text[ACTIVE]	= @text_color_dark
 	text[SELECTED]	= @text_color_dark
-	
+
 	engine "murrine" 
 	{
 		roundness = 0 # Roundness of menu items.
@@ -230,7 +230,7 @@ style "entry" = "wider"
 style "button" = "wider"
 {	
 	bg[NORMAL]        = "#f9f9f9"
-	bg[PRELIGHT]      = "#f9f9f9"
+	# bg[PRELIGHT]      = "#f9f9f9"
 	bg[ACTIVE]        = "#f9f9f9"
 	bg[SELECTED]      = "#f9f9f9"
 	bg[INSENSITIVE]   = "#f9f9f9"
@@ -238,8 +238,8 @@ style "button" = "wider"
   	engine "murrine" 
 	{
 		contrast            = 1.0
-		highlight_shade     = 1.0
-		lightborder_shade   = 1.0
+		# highlight_shade     = 1.0
+		# lightborder_shade   = 1.0
 		gradient_shades     = {1.0,1.0,1.0,1.0}
 		border_shades       = {1.0, 1.0 }
 		shadow_shades       = {1.0,2.0}

@@ -1,18 +1,14 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-#nav-bar{
-position:relative !important;
-overflow:hidden !important;
-height:0px;
-opacity:0;
-transition-duration:0.2s
-}
-#urlbar:focus > #navbar,
-#urlbar:active > #navbar,
-#nav-bar:active,
-#nav-bar:focus,
-#navigator-toolbox:hover #nav-bar{
-opacity:1;
-height:34px;
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+#navigator-toolbox{
+height:22px !important;
 transition-duration:0.2s;
+overflow:hidden !important;
+}
+
+#navigator-toolbox:hover{
+height:58px !important;
+transition-duration:0.2s;
+
 }
 }

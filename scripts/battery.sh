@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # low battery in %
-LOW_BATTERY="10"
+LOW_BATTERY="15"
 # display icon
 ICON="/home/valentin/.config/awesome/icons/battery44.png"
 # path to battery /sys
