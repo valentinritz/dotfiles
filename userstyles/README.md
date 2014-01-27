@@ -10,7 +10,8 @@ New Tab page is by me. Js is by [simpleweather](http://simpleweatherjs.com/).
 Some of theses userstyles can be found on [my userstyle page](http://userstyles.org/users/88360). Check them out ;)
 
 ##LessChrome
-LessChrome.css is an userstyle that hides the locationbar for Firefox Australis. I use it as a replacement of [LessChrome HD](https://addons.mozilla.org/fr/firefox/addon/prospector-lessChrome-HD/)
+Hides the locationbar.
+The css code is a rewamp of this addons : [Australis Slimmr](https://addons.mozilla.org/fr/firefox/addon/australis-slimmr/)
 
 ##Reddit
 ![Reddit](http://gniii.org/file/reddit.png)

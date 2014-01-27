@@ -341,6 +341,8 @@ awful.rules.rules = {
        properties = { tag = tags[1][3]} },
     { rule = { name = "irssi" },
        properties = { tag = tags[1][3]} },
+    { rule = { name = "turses" },
+       properties = { tag = tags[1][3]} },
     { rule = { class = "Transmission" },
        properties = { tag = tags[1][1]} },
     { rule = { class = "Vlc" },

@@ -13,9 +13,9 @@ The visual style of the panel was stolen [here](http://www.reddit.com/r/unixporn
 
 - Firefox (aurora)
 - urxvt
-  - zsh
   - snownews
   - irssi
+  - turses
 - gVim
   - molokai theme
   - powerline
@@ -23,7 +23,6 @@ The visual style of the panel was stolen [here](http://www.reddit.com/r/unixporn
 - zathura
 - inkscape
 - gimp
-- Turpial
 - gmrun
 - ...
 

@@ -23,6 +23,8 @@ PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
 #Alias
 alias ink='$HOME/Apps/inkddg.sh'
 alias prompt='$HOME/Apps/infos.sh'
+
+alias addon-sdk="cd /opt/addon-sdk && source bin/activate; cd -"
 # alias xtra='sudo netctl stop unifr | sudo netctl start xtra'
 # alias unifr='sudo netctl stop xtra | sudo netctl start unifr'
 
