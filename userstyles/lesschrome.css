@@ -1,5 +1,4 @@
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
-
 #nav-bar {
     -moz-transition: all 200ms linear 0ms !important;
     visibility: visible;
@@ -7,7 +6,6 @@
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    opacity: 1;
     -moz-box-ordinal-group: 2 !important;
     background-image: none !important;
     box-shadow: none !important;
@@ -18,16 +16,7 @@
 }
 
 #navigator-toolbox:not(:hover)  > #nav-bar:not([customizing]) {
-    opacity: 1;
-    visibility: visible;
     margin-top:-30px !important;
     z-index:-1 !important
-
-}
-
-#navigator-toolbox:not(:active),
-.nav-bar-visible {
-    visibility:visible !important;
-    opacity: 1 !important;
 }
 }
