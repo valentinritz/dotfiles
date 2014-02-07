@@ -171,7 +171,7 @@ globalkeys = awful.util.table.join(
 
 --launch key
 
-    awful.key({ modkey, }, "a", function () awful.util.spawn("gmrun") end),
+    awful.key({ modkey, }, "a", function () awful.util.spawn("/home/valentin/Apps/bashrun.sh") end),
     awful.key({ modkey, }, "t", function () awful.util.spawn("thunar") end),
     awful.key({ modkey, }, "0", function () 
     awful.util.spawn("xfce4-terminal -e 'vim /home/valentin/Dropbox/todo.txt'") end),
@@ -347,6 +347,10 @@ awful.rules.rules = {
        properties = { tag = tags[1][1]} },
     { rule = { class = "Vlc" },
        properties = { border_width = 0} },
+    { rule = { name = "bashrun" },
+       properties = { floating = true,
+                      border_width = 0}},
+
 }
 -- }}}
 

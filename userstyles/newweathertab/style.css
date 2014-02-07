@@ -1,14 +1,7 @@
-/*
-  Docs at http://simpleweatherjs.com
-
-  Look inspired by http://www.degreees.com/
-  Used for demo purposes.
-*/
-
 body {
   font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   background: #0091c2;
-  transition: all 10s ease-in-out 0s;
+  transition: all 30s ease-in-out 0s;
 }
 
 #weather {
