@@ -36,13 +36,12 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/colorizer'
-Bundle 'junegunn/goyo.vim'
 
 
 filetype plugin indent on
 filetype plugin on
 
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 let g:EasyMotion_leader_key = ','
 let mapleader=","
 
@@ -129,9 +128,10 @@ au filetype html,xml set listchars-=tab:>.
 """ MAKE THE 81ST COLUMN STAND OUT
 " (just the 81st column of wide lines... )
 
-highlight ColorColumn ctermbg=red guibg=#444444
+highlight ColorColumn ctermbg=238 guibg=#444444
 call matchadd('ColorColumn', '\%81v', 100)
 
+" highlight Comment cterm=underline ctermbg=Blue ctermfg=White
 """ Toggle relative/absolute numbering
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -181,10 +181,33 @@ let g:tex_flavor = "latex"
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=1
 
+"" Mouse pointer
+
+if &term =~ "^rxvt"
+  " use an orange cursor in insert mode
+  let &t_SI = "\<Esc>]12;White\x7"
+  " use a red cursor otherwise
+  let &t_EI = "\<Esc>]12;Gray\x7"
+  silent !echo -ne "\033]12;Gray\007"
+  " reset cursor when vim exits
+  autocmd VimLeave * silent !echo -ne "\033]112\007"
+endif
+
+if &term =~ '^xterm'
+  " solid underscore
+  let &t_SI .= "\<Esc>[5 q"
+  " solid block
+  let &t_EI .= "\<Esc>[2 q"
+  " 1 or 0 -> blinking block
+  " 3 -> blinking underscore
+  " Recent versions of xterm (282 or above) also support
+  " 5 -> blinking vertical bar
+  " 6 -> solid vertical bar
+endif
 
 """ DistractonFree mode
 let g:centerinscreen_active = 0
- 
+
 function! ToggleCenterInScreen(desired_width)
   if g:centerinscreen_active == 0
     let l:window_width = winwidth(winnr())

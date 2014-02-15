@@ -648,7 +648,6 @@ style "calendar"
 	bg[NORMAL]	= shade (0.6, @bg_color_dark)
 	bg[PRELIGHT]	= shade (0.8, @selected_bg_color)
 }
-
 ###############################################################################
 # The following part of the gtkrc applies the different styles to the widgets.
 ###############################################################################
@@ -807,3 +806,4 @@ include "apps/claws-mail.rc"
 include "apps/gmusicbrowser.rc"
 include "apps/terminal.rc"
 include "apps/thunar.rc"
+include "apps/gvim.rc"

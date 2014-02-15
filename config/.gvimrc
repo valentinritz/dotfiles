@@ -13,5 +13,6 @@ set vb t_vb=
 """Font
 
 if has('gui_running')
+  " set guifont=termsyn\ 14
   set guifont=PragmataPro\ 8
 endif

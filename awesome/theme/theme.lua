@@ -15,7 +15,7 @@ theme.wallpaper = "/home/valentin/Images/petroskoublis.jpg"
 
 
 -- {{{ Espace entre fenêtres
-theme.useless_gap_width = 15
+theme.useless_gap_width = 20
 -- }}}
 
 -- {{{ Styles

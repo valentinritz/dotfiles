@@ -197,14 +197,15 @@ abstracts = {
   topicsbstart = "%BChannel: %b\"$*";
   topicsbend = "$*%b\"";
 
-  prompt = " %r$* »%n ";
+  # prompt = " %r$* »%n ";
+  prompt = "%r »%n ";
   # prompt = " %K└╼ ";
 
   sb = "[$*]";
   sbmode = " %K[%g%g+%n$*%K]";
   sbaway = " %g/* zZzZ */%n";
   sbservertag = ":%g$0%n";
-  sbnickmode = "$0";
+  sbnickmode = "...$0";
 
   # Usercount
   sb_usercount = "{sb %_$0%_ nicks ($1-)}";

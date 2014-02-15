@@ -116,7 +116,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 naughty.config.defaults.screen = screen.count()
 --naughty.config.defaults.timeout = 10
 --naughty.config.defaults.hover_timeout = 0.5
-naughty.config.defaults.position = "top_right"
+naughty.config.defaults.position = "top"
 naughty.config.defaults.height = 44
 naughty.config.defaults.margin = 0
 naughty.config.padding = 21
@@ -172,7 +172,6 @@ globalkeys = awful.util.table.join(
 --launch key
 
     awful.key({ modkey, }, "a", function () awful.util.spawn("/home/valentin/Apps/bashrun.sh") end),
-    awful.key({ modkey, }, "v", function () awful.util.spawn("gvim") end),
     awful.key({ modkey, }, "t", function () awful.util.spawn("thunar") end),
     awful.key({ modkey, }, "0", function () 
     awful.util.spawn("xfce4-terminal -e 'vim /home/valentin/Dropbox/todo.txt'") end),

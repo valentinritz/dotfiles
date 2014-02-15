@@ -3,7 +3,7 @@
 <action>
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
-	<unique-id>1390317204546260-5</unique-id>
+	<unique-id>1392229313550174-2</unique-id>
 	<command>urxvt -cd %f</command>
 	<description>Example for a custom action</description>
 	<patterns>*</patterns>

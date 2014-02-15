@@ -15,7 +15,7 @@ compinit
 
 bindkey -v
 # export EDITOR="vim"
-export EDITOR="gvim"
+export EDITOR="vim"
 
 # PATH
 PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
