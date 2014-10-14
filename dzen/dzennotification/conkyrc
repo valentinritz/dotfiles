@@ -1,0 +1,21 @@
+update_interval 0.05
+total_run_times 50
+double_buffer yes
+own_window yes
+own_window_type override
+
+background no
+cpu_avg_samples 1
+override_utf8_locale yes
+short_units yes
+pad_percents 2
+top_name_width 9
+uppercase no
+out_to_console yes
+out_to_x no
+
+TEXT
+
+${if_match "${exec amixer get Master | grep "Mono:" | egrep -o '[+[a-z]+]'}" == "[off]"}^i(/home/valentin/.config/awesome/icons/spkrmute44.xpm)^bg(\#ef3838)\
+${else}^i(/home/valentin/.config/awesome/icons/spkr44.xpm)^bg(\#99cc55)${endif}^r(${exec /home/valentin/Apps/dzen/dzennotification/bar/vol.sh})^bg(\#231f20)\
+^r(${exec /home/valentin/Apps/dzen/dzennotification/bar/minvol.sh})^fg(\#ffffff)^ib(1)^p(-120;0)${exec amixer get Master | egrep -o "[0-9]+%"}

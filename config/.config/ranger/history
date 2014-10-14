@@ -1,45 +1,50 @@
-open_with gvim
-mkdir colourscheme
-rm colourscheme
-xfce4-terminal
-term
-rm
-open
-execute
-open gimp
-gimp
-search 2013
-rename 00 - Films.txt
-mkdir social
-rename Social
-rename Old banners and icons
-rename New Twitter Banner
-rename Tees
-search ttt
-mkdir 2014 tees
-mkdir 00 - Old
-rename Annimation Search off
-reanme Lettre Type - latex
-rename Lettre Type - latex
-rename Page valentinritz.com
-rename 00 - Getty
-rename 00 - Gniii
-mkdir Latex
-rename 00 - Notes
-rename Paperasse
-rename Antisocial
 mkdir Etudes
 mkdir Old DDG Job
-
 open_with gimp
 termina
-terminal
 shell wine Set-up.exe 
 shell ./conky.sh
-search .xinitrc
 rename Rodrigo y Gabriela
 mkdir The Subways
 rename All Or Nothing (2008)
-delete
 open_with xarchiver
 rename Young For Eternity (2005)
+rename 2012 - An Awesome Wave
+mkdir Alt-J
+rename 2014 - This Is All Yours
+mkdir Chairlift
+rename 2012 - Something
+rename The Kills
+r
+rename 2011 - Blood Pressures
+rename 2003 - Keep On Your Mean Side
+rename 2008 - Midnight Boom
+rename 2005 - No Wow
+rename 2012 - The Last Goodbye
+mkdir Stupeflip
+rename 2012 - Terrora !!
+rename 2011 - The Hypnoflip Invasion
+mkdir Little Dragon
+rename 2014 - Nabuma Rubberband
+rename 2008 - All Or Nothing
+rename Nujabes
+
+help
+rename 2003 - Hydeout Productions First Collection
+rename 2003 - Metaphorical Music
+rename 2004 - Samurai Champloo Music Records - Depature
+rename 2004 - Samurai Champloo Music Records - Impression
+rename 2005 - Modal Soul
+rename 2007 - Hydeout Productions Second Collection
+rename 2011 - Spiritual State
+mkdir test
+shell thunar
+rename time
+rename settings
+rename mpd
+rename mail
+rename command
+shell time
+terminal
+delete
+search .xinitrc
