@@ -3,12 +3,43 @@ mkdir colourscheme
 rm colourscheme
 xfce4-terminal
 term
-
 rm
-delete
 open
 execute
-terminal
 open gimp
 gimp
 search 2013
+rename 00 - Films.txt
+mkdir social
+rename Social
+rename Old banners and icons
+rename New Twitter Banner
+rename Tees
+search ttt
+mkdir 2014 tees
+mkdir 00 - Old
+rename Annimation Search off
+reanme Lettre Type - latex
+rename Lettre Type - latex
+rename Page valentinritz.com
+rename 00 - Getty
+rename 00 - Gniii
+mkdir Latex
+rename 00 - Notes
+rename Paperasse
+rename Antisocial
+mkdir Etudes
+mkdir Old DDG Job
+
+open_with gimp
+termina
+terminal
+shell wine Set-up.exe 
+shell ./conky.sh
+search .xinitrc
+rename Rodrigo y Gabriela
+mkdir The Subways
+rename All Or Nothing (2008)
+delete
+open_with xarchiver
+rename Young For Eternity (2005)

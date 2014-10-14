@@ -35,7 +35,7 @@ preview_script = '~/.config/ranger/scope.sh'
 use_preview_script = True
 
 # Use a unicode "..." character to mark cut-off filenames?
-unicode_ellipsis = False
+unicode_ellipsis = True
 
 # Show dotfiles in the bookmark preview box?
 show_hidden_bookmarks = True
@@ -71,7 +71,7 @@ mouse_enabled = True
 
 # Display the file size in the main column or status bar?
 display_size_in_main_column = True
-display_size_in_status_bar = True
+display_size_in_status_bar = False
 
 # Display files tags in all columns or only in main column?
 display_tags_in_all_columns = True

@@ -421,7 +421,7 @@ class terminal(Command):
         from ranger.ext.get_executables import get_executables
         command = os.environ.get('TERMCMD', os.environ.get('TERM'))
         if command not in get_executables():
-            command = 'xfce4-terminal'
+            command = 'urxvt'
         if command not in get_executables():
             command = 'xterm'
         self.fm.run(command, flags='f')

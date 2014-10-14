@@ -1,10 +1,10 @@
     !Colors
 
     ! URxvt.depth: 32
-    ! URxvt.background: #272822
-    ! URxvt.foreground: #e6e6e6
     *foreground: #D7D0C7
     *background: #252525
+    ! *foreground: #E8DFD6
+    ! *background: #021B21
     URxvt.cursorColor: #FFFFFF
     URxvt.cursorColor2: #252525
     URxvt.colorIT: #444
@@ -12,18 +12,18 @@
     URxvt.colorUL: #FF8F00
     URxvt.colorRV: #333333
     URxvt.underlineColor: #0E0E0E
-    URxvt.borderColor: #0E0E0E
+    URxvt.borderColor: #252525
     URxvt.pointerColor: #000000
     Xterm.pointerColor: #ffffff
     *pointerColor2: #FFFFFF
-    *internalBorder: 0
+    *internalBorder: 23
 
     !black
-    ! *color0:  #272822
-    ! *color8:  #6C6C6C
+    *color0: #252525
+    *color8: #444444
     !red
-    ! *color1:  #E11D3B
-    ! *color9:  #FE5520
+    *color1: #E84F4F
+    *color9: #D23D3D
     !green
     *color2:  #6DC130
     *color10: #9FE93A
@@ -43,49 +43,30 @@
     *color7:  #FFFFFF
     *color15: #878787
 
-    *color0: #252525
-    *color8: #444444
-    ! *color1: #E84F4F
-    *color1: #E84F4F
-    *color9: #D23D3D
-    ! *color2: #B8D68C
-    ! *color10: #A0CF5D
-    ! *color3: #E1AA5D
-    ! *color11: #F39D21
-    ! *color4: #7DC1CF
-    ! *color12: #4E9FB1
-    ! *color5: #9B64FB
-    ! *color13: #8542FF
-    ! *color6: #6D878D
-    ! *color14: #42717B
-    ! *color7: #dddddd
-    ! *color15: #dddddd
     !Font
 
-    ! URxvt.font: xft:PragmataPro:size=7.5
+    xterm*faceName: PragmataTT:size=9:antialias=false
+    ! xterm*faceName: Droid Sans Mono:size=9:antialias=true
+    ! URxvt.letterSpace: -3
 
-    xterm*faceName: PragmataTT:size=8:antialias=false
-
-    ! Forbid bold font faces; bold type is light blue.
-    XTerm*colorBDMode: true
-    ! XTerm*colorBD: rgb:82/a4/d3
-    ! Do not underscore text, underlined text is white.
-    ! XTerm*colorULMode: true
-    ! XTerm*colorUL: rgb:e4/e4/e4
-
-    URxvt.font: xft:PragmataTT:antialias=false:pixelsize=11, \
-                xft:unifont:antialias=false
-    URxvt.boldFont:xft: PragmataTT:antialias=false:style=bold:pixelsize=11, \
-                xft:unifont:antialias=false:style=bold
-
-    URxvt.italicFont:xft: PragmataTT:antialias=false:style=italic:pixelsize=11, \
-                xft:unifont:antialias=false:style=italic
+    ! URxvt.font: xft:Droid Sans Mono:antialias=false:pixelsize=12, \
+    !            xft:unifont:antialias=false
+    ! URxvt.boldFont:xft:Droid Sans Mono:antialias=true:style=bold:pixelsize=12, \
+    !            xft:unifont:antialias=false:style=bold
+    ! URxvt.italicFont:xft:Droid Sans Mono:antialias=true:style=italic:pixelsize=12, \
+    !            xft:unifont:antialias=false:style=italic
+    URxvt.font: xft:PragmataTT:antialias=false:pixelsize=12, \
+               xft:unifont:antialias=false
+    URxvt.boldFont:xft:PragmataTT:antialias=false:style=bold:pixelsize=12, \
+               xft:unifont:antialias=false:style=bold
+    URxvt.italicFont:xft:PragmataTT:antialias=false:style=italic:pixelsize=12, \
+               xft:unifont:antialias=false:style=italic
 
     !Plugin
 
-    perl-ext-common:  default,matcher,clipboard
+    URxvt.perl-ext-common:  default,matcher,clipboard
     ! URxvt.perl-ext:  default,clipboard
-    url-launcher:      /usr/bin/firefox-aurora
+    URxvt.url-launcher:      /usr/bin/firefox-nightly
     URxvt.matcher.button:   1
 
     !general

@@ -1,1 +1,1 @@
-firefox-aurora -remote openURL\(%s,new-tab\)
+firefox-nightly -remote openURL\(%s,new-tab\)

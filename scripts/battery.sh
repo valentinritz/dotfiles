@@ -17,7 +17,8 @@ while [ true ]; do
             CURRENT_BATTERY=$(cat $BATTERY_PATH/capacity)
 
             if [ "$CURRENT_BATTERY" -lt "$LOW_BATTERY" ]; then
-                notify-send -i "$ICON" -u critical  "La batterie est faible." "Plus que $CURRENT_BATTERY % : serre les fesses."
+                # notify-send -i "$ICON" -u critical  "La batterie est faible." "Plus que $CURRENT_BATTERY % : serre les fesses."
+                notify-send -u critical  "La batterie est faible." "Plus que $CURRENT_BATTERY % : serre les fesses."
             fi
         fi
     fi

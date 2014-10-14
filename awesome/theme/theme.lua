@@ -10,35 +10,50 @@
 theme = {}
 --theme.wallpaper = "/home/valentin/Images/lR1cqPB.jpg"
 --theme.wallpaper = "/home/valentin/Images/393557_gory_gimalai_skaly_oblaka_2048x1152_(www.GdeFon.ru).jpg"
-theme.wallpaper = "/home/valentin/Images/petroskoublis.jpg"
+--theme.wallpaper = "/home/valentin/Images/petroskoublis.jpg"
+--theme.wallpaper = "/home/valentin/Images/Southern_Alps_1366x768.jpg"
+--theme.wallpaper = "/home/valentin/Images/antelope_island.jpg"
+--theme.wallpaper = "/home/valentin/Images/mount.jpg"
+--theme.wallpaper = "/home/valentin/Images/plage.jpg"
+--theme.wallpaper = "/home/valentin/Images/mount2.jpg"
+--theme.wallpaper = "/home/valentin/Images/round.jpg"
+theme.wallpaper = "/home/valentin/Images/space.jpg"
 -- }}}
 
 
 -- {{{ Espace entre fenêtres
-theme.useless_gap_width = 20
+theme.useless_gap_width = 24
 -- }}}
 
 -- {{{ Styles
-theme.font      = "PragmataPro 7"
+theme.font      = "Pragmatatt 8"
 -- }}}
 
 -- {{{ Colors
 theme.fg_normal  = "#ffffff"
 --3c4c5c
-theme.fg_focus   = "#ffffff"
-theme.fg_urgent  = "#ffffff"
+theme.bg_focus   = "#222222"
+theme.fg_urgent  = "#222222"
 theme.bg_normal  = "#222222"
-theme.bg_focus   = "#5599cc"
-theme.bg_urgent  = "#272822"
+theme.fg_focus   = "#888888"
+theme.bg_urgent  = "#888888"
 theme.bg_systray = theme.bg_normal
 --Couleurs précédentes : fff, 6c6c6c et "#272822"
 -- }}}
 
 -- {{{ Borders
 theme.border_width  = 1
-theme.border_normal = "#3F3F3F"
-theme.border_focus  = "#999999"
-theme.border_marked = "#CC9393"
+--theme.border_normal = "#999999"
+--theme.border_focus  = "#3F3F3F"
+--theme.border_marked = "#CC9393"
+theme.border_normal = "#252525"
+theme.border_focus  = "#252525"
+theme.border_marked = "#252525"
+-- Next
+--theme.border_normal = "#3F3F3F"
+--theme.border_focus  = "#999999"
+--theme.border_marked = "#CC9393"
+-- First
 --theme.border_normal = "#3F3F3F"
 --theme.border_focus  = "#6F6F6F"
 --theme.border_marked = "#CC9393"
@@ -82,7 +97,7 @@ theme.mouse_finder_color = "#CC9393"
 -- menu_[border_color|border_width]
 theme.menu_height = 24
 theme.menu_width  = 130
-theme.menu_border_width  = 3
+--theme.menu_border_width  = 3
 --theme.menu_border_color  = "#dddddd"
 theme.menu_border_color  = "#1f1f1f"
 -- }}}

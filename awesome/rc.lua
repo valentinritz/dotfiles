@@ -8,7 +8,7 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
-local naughty = require("naughty")
+--local naughty = require("naughty")
 local menubar = require("menubar")
 
 vicious = require("vicious")
@@ -19,34 +19,31 @@ mylayouts = require("layouts")
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
-if awesome.startup_errors then
-    naughty.notify({ preset = naughty.config.presets.critical,
-                     title = "Oops, there were errors during startup!",
-                     text = awesome.startup_errors })
-end
+--if awesome.startup_errors then
+--    naughty.notify({ preset = naughty.config.presets.critical,
+--                     title = "Oops, there were errors during startup!",
+--                     text = awesome.startup_errors })
+--end
 
 -- Handle runtime errors after startup
-do
-    local in_error = false
-    awesome.connect_signal("debug::error", function (err)
-        -- Make sure we don't go into an endless error loop
-        if in_error then return end
-        in_error = true
-
-        naughty.notify({ preset = naughty.config.presets.critical,
-                         title = "Oops, an error happened!",
-                         text = err })
-        in_error = false
-    end)
-end
+--do
+--    local in_error = false
+--    awesome.connect_signal("debug::error", function (err)
+--        -- Make sure we don't go into an endless error loop
+--        if in_error then return end
+--        in_error = true
+--
+--        naughty.notify({ preset = naughty.config.presets.critical,
+--                         title = "Oops, an error happened!",
+--                         text = err })
+--        in_error = false
+--    end)
+--end
 -- }}}
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 beautiful.init("/home/valentin/.config/awesome/theme/theme.lua")
-
--- Naughty config
-naughty.config.icon_size = 48
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -56,10 +53,13 @@ editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
+
 local layouts =
 {
     --custom layouts
       mylayouts.uselesstile,
+      --mylayouts.tile,
+      --mylayouts.browse2,
       --layouts.termfair,
       --layouts.browse,
       --layouts.uselessfair,
@@ -84,7 +84,7 @@ tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
     tags[s] = awful.tag({ "desk","warp","mail","porn"}, s, 
-    { layouts[1], layouts[2], layouts[1], layouts[2] })
+    { layouts[1], layouts[1], layouts[1], layouts[2] })
 end
 -- }}}
 
@@ -95,7 +95,7 @@ end
 --             { "earthquake", "urxvt -geometry 166x65+27+27 -title earthquake -e earthquake" }
 --}
 
-mymainmenu = awful.menu({ items = { { "~", "thunar" },
+mymainmenu = awful.menu({ items = { { "~", "urxvt -e ranger" },
                                     --{ "warpzone", myappsmenu },
                                     { "restart awesome", awesome.restart },
                                     { "quit", awesome.quit },
@@ -112,58 +112,61 @@ mylauncher = awful.widget.launcher({ image = "/home/valentin/.config/awesome/ico
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
 
--- {{{ naughty theme
-naughty.config.defaults.screen = screen.count()
---naughty.config.defaults.timeout = 10
---naughty.config.defaults.hover_timeout = 0.5
-naughty.config.defaults.position = "top_right"
-naughty.config.defaults.height = 44
-naughty.config.defaults.margin = 0
-naughty.config.padding = 21
-naughty.config.defaults.width = 244
-naughty.config.defaults.gap = 10
-naughty.config.defaults.ontop = true
---naughty.config.defaults.font = "Open Sans 10"
-naughty.config.presets.low.icon = "/home/valentin/.config/awesome/icons/notification3low.png"
-naughty.config.presets.normal.icon = "/home/valentin/.config/awesome/icons/notification3.png"
-naughty.config.presets.critical.icon = "/home/valentin/.config/awesome/icons/notification3crit.png"
---naughty.config.defaults.icon_size = 36
-naughty.config.defaults.icon_height = 44
-naughty.config.defaults.icon_width = 54
---naughty.config.presets.normal.border_color = beautiful.border_focus or '#535d6c'
-naughty.config.defaults.border_width = 0
-naughty.config.presets.normal.fg = '#ffffff'
-naughty.config.presets.normal.bg = '#222222'
-naughty.config.presets.critical.bg = '#222222'
---naughty.config.presets.normal.bg = '#5599cc'
---naughty.config.presets.low.bg = '#99cc55'
---naughty.config.presets.critical.bg = '#ef3838'
---naughty.config.presets.low.fg = '#f0dfaf'
---naughty.config.presets.low.border_color = beautiful.border_focus or '#535d6c'
---naughty.config.presets.critical.fg = '#dcdccc'
---naughty.config.presets.critical.width = 400
---naughty.config.presets.critical.height = 150
---naughty.config.presets.critical.border_color = beautiful.border_focus or '#535d6c'
--- }}}
+---- {{{ naughty theme
+
+--naughty.config.defaults.screen = screen.count()
+--naughty.config.defaults.position = "top_right"
+--naughty.config.defaults.height = 44
+--naughty.config.defaults.margin = 0
+--naughty.config.padding = 21
+--naughty.config.defaults.width = 244
+--naughty.config.defaults.gap = 10
+--naughty.config.defaults.ontop = true
+--naughty.config.presets.low.icon = "/home/valentin/.config/awesome/icons/notification3low.png"
+--naughty.config.presets.normal.icon = "/home/valentin/.config/awesome/icons/notification3.png"
+--naughty.config.presets.critical.icon = "/home/valentin/.config/awesome/icons/notification3crit.png"
+--naughty.config.defaults.icon_height = 44
+--naughty.config.defaults.icon_width = 54
+--naughty.config.defaults.border_width = 0
+--naughty.config.presets.normal.fg = '#ffffff'
+--naughty.config.presets.normal.bg = '#222222'
+--naughty.config.presets.critical.bg = '#222222'
+----naughty.config.defaults.timeout = 10
+----naughty.config.defaults.hover_timeout = 0.5
+----naughty.config.defaults.font = "Open Sans 10"
+----naughty.config.defaults.icon_size = 36
+----naughty.config.presets.normal.border_color = beautiful.border_focus or '#535d6c'
+----naughty.config.presets.normal.bg = '#5599cc'
+----naughty.config.presets.low.bg = '#99cc55'
+----naughty.config.presets.critical.bg = '#ef3838'
+----naughty.config.presets.low.fg = '#f0dfaf'
+----naughty.config.presets.low.border_color = beautiful.border_focus or '#535d6c'
+----naughty.config.presets.critical.fg = '#dcdccc'
+----naughty.config.presets.critical.width = 400
+----naughty.config.presets.critical.height = 150
+----naughty.config.presets.critical.border_color = beautiful.border_focus or '#535d6c'
+------ }}}
 
 -- {{{ Key bindings
 
 globalkeys = awful.util.table.join(
+
 -- START custom keys
 -- start volume key
+
     awful.key({ }, "XF86AudioRaiseVolume", function()
     awful.util.spawn("amixer -q sset Master 5%+")
-    awful.util.spawn("/home/valentin/Apps/dzennotification/panel.sh") end),
+    awful.util.spawn("/home/valentin/Apps/dzen/dzennotification/panel.sh") end),
 
     awful.key({ }, "XF86AudioLowerVolume", function()
     awful.util.spawn("amixer -q sset Master 5%-")
-    awful.util.spawn("/home/valentin/Apps/dzennotification/panel.sh") end),
+    awful.util.spawn("/home/valentin/Apps/dzen/dzennotification/panel.sh") end),
 
     awful.key({ }, "XF86AudioMute", function()
     awful.util.spawn("amixer -q sset Master toggle")
-    awful.util.spawn("/home/valentin/Apps/dzennotification/panel.sh") end),
+    awful.util.spawn("/home/valentin/Apps/dzen/dzennotification/panel.sh") end),
 
---start backlight key
+-- start backlight key
 
     awful.key({ }, "F8", function() awful.util.spawn("xbacklight -dec 10") end),
 
@@ -171,19 +174,55 @@ globalkeys = awful.util.table.join(
 
 --launch key
 
-    awful.key({ modkey, }, "a", function () awful.util.spawn("/home/valentin/Apps/bashrun.sh") end),
-    awful.key({ modkey, }, "v", function () awful.util.spawn("gvim") end),
-    awful.key({ modkey, }, "t", function () awful.util.spawn("thunar") end),
-    awful.key({ modkey, }, "0", function () 
-    awful.util.spawn("xfce4-terminal -e 'vim /home/valentin/Dropbox/todo.txt'") end),
---printscreen
+    awful.key({ modkey, }, "a", function () awful.util.spawn("dmenu_run -h 30 -fn 'Open Sans-10' -l 1 -w 400 -x 575 -y 100 -nb '#1a1a1a' -sb '#5599cc'") end),
+    awful.key({ modkey, }, "0", function () awful.util.spawn("xfce4-terminal -e 'vim /home/valentin/Dropbox/todo.txt'") end),
+
+-- Printscreen
+
     awful.key({         }, "Print", function () awful.util.spawn("scrot") end),
     awful.key({ modkey, }, "Print", function () awful.util.spawn("scrot -s") end),
+
+-- Toggle show desktop (for current tag(s))
+-- Source : https://awesome.naquadah.org/bugs/index.php?do=details&task_id=723
+
+    awful.key({ modkey, }, "Escape",
+      function ()
+        local curtag
+        local curtags = awful.tag.selectedlist()
+        local client
+        local clients
+        local allminimized
+
+        for x, curtag in pairs(curtags) do
+          clients = curtag:clients()
+          for y, client in pairs(clients) do
+            if client.minimized == false then
+              allminimized = false
+              break
+            else
+              allminimized = true
+            end
+          end
+
+          -- If at least one client isn't minimized, minimize all clients
+          for y, client in pairs(clients) do
+            if allminimized == false then
+              client.minimized = true 
+
+          -- Otherwise unminimize all clients
+            elseif allminimized == true then
+              client.minimized = false 
+            end
+          end
+        end
+      end
+    ),
+
 --END custom keys
 
     awful.key({ modkey, }, "j", awful.tag.viewprev ),
     awful.key({ modkey, }, "k", awful.tag.viewnext ),
-    awful.key({ modkey, }, "Escape", awful.tag.history.restore),
+    --awful.key({ modkey, }, "Escape", awful.tag.history.restore),
 
     awful.key({ modkey, }, "Left",
         function ()
@@ -224,27 +263,28 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "h", function () awful.tag.incncol( 1) end),
     awful.key({ modkey, "Control" }, "l", function () awful.tag.incncol(-1) end),
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts, 1) end),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
+    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end)
 
-    awful.key({ modkey, "Control" }, "n", awful.client.restore),
+    --awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- Menubar
-    awful.key({ modkey, "Shift"   }, "a", function() menubar.show() end)
+    --awful.key({ modkey, "Shift"   }, "a", function() menubar.show() end)
 )
 
 clientkeys = awful.util.table.join(
     awful.key({ modkey, }, "f", function (c) c.fullscreen = not c.fullscreen end),
     awful.key({ modkey, }, "q", function (c) c:kill() end),
-    awful.key({ modkey, "Control" }, "space", awful.client.floating.toggle ),
-    awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
-    awful.key({ modkey, }, "o", awful.client.movetoscreen ),
-    awful.key({ modkey, }, "t", function (c) c.ontop = not c.ontop end),
-    awful.key({ modkey, }, "n",
-        function (c)
-            -- The client currently has the input focus, so it cannot be
-            -- minimized, since minimized clients can't have the focus.
-            c.minimized = true
-        end),
+    -- Selected windows is now floating
+    awful.key({ modkey, }, "n", awful.client.floating.toggle ),
+    --awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
+    --awful.key({ modkey, }, "o", awful.client.movetoscreen ),
+    --awful.key({ modkey, }, "t", function (c) c.ontop = not c.ontop end),
+    --awful.key({ modkey, }, "n",
+    --    function (c)
+    --        -- The client currently has the input focus, so it cannot be
+    --        -- minimized, since minimized clients can't have the focus.
+    --        c.minimized = true
+    --    end),
     awful.key({ modkey, }, "m",
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
@@ -326,16 +366,15 @@ awful.rules.rules = {
        properties = { border_width = 1}},
     { rule = { class = "Firefox", instance = "StylishEdit48" },
        properties = { border_width = 1} },
-    -- Turpial
-    { rule = { class = "Turpial" },
-       properties = { tag = tags[1][3] } },
-    { rule = { class = "Turpial", name = "Image Preview" },
-       properties = { floating = true }},
     -- other apps
     { rule = { class = "Thunar", name = "Fichier en cours de traitement" },
        properties = { floating = true }},
+    { rule = { name = "sxiv" },
+       properties = { floating = true }},
     { rule = { class = "Thunderbird" },
-       properties = { tag = tags[1][2] } },
+       properties = { tag = tags[1][2]} },
+    --{ rule = { class = "Gvim" },
+    --   properties = { border_width = 24} },
     { rule = { name = "earthquake" },
        properties = { tag = tags[1][3]} },
     { rule = { name = "snownews" },
@@ -347,8 +386,12 @@ awful.rules.rules = {
     { rule = { class = "Transmission" },
        properties = { tag = tags[1][1]} },
     { rule = { class = "Vlc" },
-       properties = { border_width = 0} },
+       properties = { floating = true,
+                      border_width = 0} },
     { rule = { name = "bashrun" },
+       properties = { floating = true,
+                      border_width = 0}},
+    { rule = { name = "Steam" },
        properties = { floating = true,
                       border_width = 0}},
 

@@ -21,31 +21,31 @@ set laststatus=2
 filetype off
 set clipboard=unnamed
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
 set vb t_vb= 
 
 """""""""""""""""""" GLOBAL
 
-Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'The-NERD-tree'
-Bundle 'msanders/snipmate.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'vim-scripts/colorizer'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
+Plugin 'gmarik/vundle'
+Plugin 'bling/vim-airline'
+Plugin 'The-NERD-tree'
+Plugin 'msanders/snipmate.vim'
+" Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/colorizer'
 
+call vundle#end()
 filetype plugin indent on
-filetype plugin on
 
 "let g:Powerline_symbols = 'fancy'
 let g:EasyMotion_leader_key = ','
 let mapleader=","
 
-autocmd FileType text,txt,tex set wrap lbr nolist spell spl=fr,en
+autocmd FileType text,txt,tex,markdown set wrap lbr nolist spell spl=fr,en
 autocmd FileType html set spell spl=fr,en
 
 set t_Co=256
@@ -187,8 +187,8 @@ if &term =~ "^rxvt"
   " use an orange cursor in insert mode
   let &t_SI = "\<Esc>]12;White\x7"
   " use a red cursor otherwise
-  let &t_EI = "\<Esc>]12;Gray\x7"
-  silent !echo -ne "\033]12;Gray\007"
+  let &t_EI = "\<Esc>]12;15\x7"
+  silent !echo -ne "\033]12;15\007"
   " reset cursor when vim exits
   autocmd VimLeave * silent !echo -ne "\033]112\007"
 endif
@@ -204,27 +204,26 @@ if &term =~ '^xterm'
   " 5 -> blinking vertical bar
   " 6 -> solid vertical bar
 endif
+"""Airline
+let g:airline_theme='vava'
 
-""" DistractonFree mode
-let g:centerinscreen_active = 0
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 
-function! ToggleCenterInScreen(desired_width)
-  if g:centerinscreen_active == 0
-    let l:window_width = winwidth(winnr())
-    let l:sidepanel_width = (l:window_width - a:desired_width) / 2
-    
-    exec("silent leftabove " . l:sidepanel_width . "vsplit new")
-    wincmd l
-    exec("silent rightbelow " . l:sidepanel_width . "vsplit new")
-    wincmd h
-    let g:centerinscreen_active = 1
-  else
-    wincmd h
-    close
-    wincmd l
-    close
-    let g:centerinscreen_active = 0
-  endif
-endfunction
- 
-nnoremap <Leader>r :exec ToggleCenterInScreen(100)<CR>
+let g:airline_mode_map = {
+      \ '__' : '-',
+      \ 'n'  : '<N>',
+      \ 'i'  : '<I>',
+      \ 'R'  : '<R>',
+      \ 'c'  : '<C>',
+      \ 'v'  : '<V>',
+      \ 'V'  : '<V>',
+      \ 's'  : '<S>',
+      \ 'S'  : '<S>',
+      \ }
+
+let g:airline_section_b = '%{getcwd()}/%t'
+let g:airline_section_y = '[%c:%l] %p%%'
+let g:airline_section_c = '%m'
+let g:airline_section_x = ''
+let g:airline_section_z = ''

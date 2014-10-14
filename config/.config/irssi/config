@@ -30,6 +30,14 @@ servers = (
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
+  },
+  {
+    address = "irc.perl.org";
+    chatnet = "perl";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
   }
 );
 
@@ -97,12 +105,14 @@ chatnets = {
   };
   SILC = { type = "SILC"; };
   fn = { type = "IRC"; nick = "mwm_"; username = "mwm_"; };
+  perl = { type = "IRC"; };
 };
 
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; },
-  { name = "#duckduckgo"; chatnet = "fn"; autojoin = "yes"; }
+  { name = "#duckduckgo"; chatnet = "fn"; autojoin = "yes"; },
+  { name = "#sycontent"; chatnet = "perl"; autojoin = "yes"; }
 );
 
 aliases = {

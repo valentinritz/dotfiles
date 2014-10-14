@@ -6,7 +6,7 @@ while getopts 'n:' opt ; do
       cp /home/valentin/DDG/ddg.svg /home/valentin/"$OPTARG".svg
 
       #open the file
-      inkscape "$OPTARG".svg
+      inkscape -f="$OPTARG".svg
 
       # Creates 'watermark' from the svg file
       inkscape -f="$OPTARG".svg -e  62.png -w  62 -h  62

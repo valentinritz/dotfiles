@@ -31,7 +31,7 @@ class Default(ColorScheme):
 				fg = magenta
 			if context.directory:
 				attr |= bold
-				fg = black
+				fg = white
 			elif context.executable and not \
 					any((context.media, context.container,
 						context.fifo, context.socket)):

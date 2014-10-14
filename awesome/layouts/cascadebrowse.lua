@@ -1,9 +1,16 @@
 -- Grab environment.
-local ipairs = ipairs
-local tonumber = tonumber
+local awful = require("awful")
+local tag = require("awful.tag")
 local beautiful = require("beautiful")
-local awful = awful
+local ipairs = ipairs
+local math = { floor = math.floor,
+                    max = math.max,
+                    min = math.min }
+local tonumber = tonumber
 local print = print
+
+local cascadebrowse = {}
+
 
 module("layouts.cascadebrowse")
 

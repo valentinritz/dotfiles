@@ -14,5 +14,6 @@ set vb t_vb=
 
 if has('gui_running')
   " set guifont=termsyn\ 14
-  set guifont=PragmataPro\ 8
+  set guifont=Pragmatatt\ 10
+  " set guifont=Droid\ Sans\ Mono\ 8
 endif

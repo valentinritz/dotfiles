@@ -82,10 +82,35 @@ local function tile_group(cls, wa, orientation, fact, group)
             -- get moved away from the border. Other clients just
             -- get shrinked in one direction.
 
+
+          if #cls == 1 then
             top = false
             left = false
 
-            gap_factor = (useless_gap / 100) * 2
+            gap_factor = (useless_gap / 100) * 1
+
+            if geom[y] == wa[y] then
+              top = true
+            end
+
+            if geom[x] == 0 or geom[x] == wa[x] then
+              left = true
+            end
+
+            geom[height] = geom[height] - (2 + gap_factor) * useless_gap
+            geom[y] = geom[y] + useless_gap * 1
+
+            --geom[width] = geom[width] - (2 + gap_factor) * useless_gap * 29
+            geom[width] = 800
+            --geom[x] = geom[x] + useless_gap * 18
+            geom[x] = 400
+
+          else
+
+            top = false
+            left = false
+
+            gap_factor = (useless_gap / 100)
 
             if geom[y] == wa[y] then
                 top = true
@@ -108,6 +133,7 @@ local function tile_group(cls, wa, orientation, fact, group)
             else
                 geom[width] = geom[width] - (1 + gap_factor) * useless_gap
             end
+          end
         end
         -- End of useless gap.
 
@@ -155,41 +181,42 @@ local function tile(param, orientation)
         place_master = false
     end
 
-    -- this was easier than writing functions because there is a lot of data we need
-    for d = 1,2 do
-        if place_master and nmaster > 0 then
-            local size = wa[width]
-            if nother > 0 then
-                size = math.min(wa[width] * mwfact, wa[width] - (coord - wa[x]))
-            end
-            if not data[0] then
-                data[0] = {}
-            end
-            coord = coord + tile_group(cls, wa, orientation, data[0], {first=1, last=nmaster, coord = coord, size = size})
-        end
+      -- this was easier than writing functions because there is a lot of data we need
+      for d = 1,2 do
+          if place_master and nmaster > 0 then
+              local size = wa[width]
+              if nother > 0 then
+                  size = math.min(wa[width] * mwfact, wa[width] - (coord - wa[x]))
+              end
+              if not data[0] then
+                  data[0] = {}
+              end
+              coord = coord + tile_group(cls, wa, orientation, data[0], {first=1, last=nmaster, coord = coord, size = size})
+          end
 
-        if not place_master and nother > 0 then
-            local last = nmaster
+          if not place_master and nother > 0 then
+              local last = nmaster
 
-            -- we have to modify the work area size to consider left and top views
-            local wasize = wa[width]
-            if nmaster > 0 and (orientation == "left" or orientation == "top") then
-                wasize = wa[width] - wa[width]*mwfact
-            end
-            for i = 1,ncol do
-                -- Try to get equal width among remaining columns
-                local size = math.min( (wasize - (coord - wa[x])) / (ncol - i + 1) )
-                local first = last + 1
-                last = last + math.floor((#cls - last)/(ncol - i + 1))
-                -- tile the column and update our current x coordinate
-                if not data[i] then
-                    data[i] = {}
-                end
-                coord = coord + tile_group(cls, wa, orientation, data[i], { first = first, last = last, coord = coord, size = size })
-            end
-        end
-        place_master = not place_master
-    end
+              -- we have to modify the work area size to consider left and top views
+              local wasize = wa[width]
+              if nmaster > 0 and (orientation == "left" or orientation == "top") then
+                  wasize = wa[width] - wa[width]*mwfact
+              end
+              for i = 1,ncol do
+                  -- Try to get equal width among remaining columns
+                  local size = math.min( (wasize - (coord - wa[x])) / (ncol - i + 1) )
+                  local first = last + 1
+                  last = last + math.floor((#cls - last)/(ncol - i + 1))
+                  -- tile the column and update our current x coordinate
+                  if not data[i] then
+                      data[i] = {}
+                  end
+                  coord = coord + tile_group(cls, wa, orientation, data[i], { first = first, last = last, coord = coord, size = size })
+              end
+          end
+          place_master = not place_master
+      end
+    --end
 
 end
 
