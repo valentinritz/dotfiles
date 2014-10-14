@@ -1,6 +1,8 @@
 ![Desktop](https://raw.githubusercontent.com/octomwm/dotfiles/master/screenshot.png)
 Fonts are Pragamata and Droid Sans. [Wallpaper is Space Oddity by ???](http://everynicething.com/Space-Oddity).
-The visual style is "inspired" (hahahaha) by the wonderful screenshots by Kamiru- : [Github](https://github.com/onodera-punpun) - [reddit](http://www.reddit.com/r/unixporn/comments/29rh3h/fvwm_rounded_corners/)
+
+The visual style is "inspired" (hahahaha) by the wonderful screenshots by Kamiru- : [Github](https://github.com/onodera-punpun) - [reddit](http://www.reddit.com/r/unixporn/comments/29rh3h/fvwm_rounded_corners/).
+
 Differences are in the code : I only used conky.
 
 ##Setup
