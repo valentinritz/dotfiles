@@ -1,8 +1,7 @@
-![Desktop](http://gniii.org/file/Janv2014.png)
-Fonts are Pragamata and Open Sans. [The Wallpaper is from Petros Koublis](http://stampsy.com/5036). And picture credit goes to "Die Antwoord".
-The visual style of the panel was stolen [here](http://www.reddit.com/r/unixporn/comments/1nk1mk/archwmfs2_quadrilaterals/). Difference is in the code : I wrote it for dzen2+conky.
-
-[View a screencast (very poor quality)](http://gniii.org/file/screen.gif)
+![Desktop](https://github.com/octomwm/dotfiles/master/screenshot.png)
+Fonts are Pragamata and Droid Sans. [Wallpaper is Space Oddity by ???](http://everynicething.com/Space-Oddity).
+The visual style is "inspired" (hahahaha) by the wonderful screenshots by Kamiru-. [Github](https://github.com/onodera-punpun) - [reddit](http://www.reddit.com/r/unixporn/comments/29rh3h/fvwm_rounded_corners/)
+Differences are in the code : I used only conky.
 
 ##Setup
 
@@ -11,19 +10,19 @@ The visual style of the panel was stolen [here](http://www.reddit.com/r/unixporn
 
 ##Apps
 
-- Firefox (aurora)
+- Firefox
 - urxvt
+  - ranger
   - snownews
   - irssi
-  - turses
-- gVim
+  - ncmpcpp
+- vim
   - molokai theme
-  - powerline
-- Thunar
+  - airline
 - zathura
 - inkscape
 - gimp
-- gmrun
+- bashrun
 - ...
 
 ##Links

@@ -7,7 +7,7 @@ cp ~/Apps/scripts/infos.sh ~/Apps/scripts/notify-song-change.sh ~/Apps/scripts/c
 
 # save conky and dzen stuff
 cp -r ~/Apps/conky -t ~/Documents/Github/dotfiles
-cp -r ~/Apps/dzen -t ~/Documents/Github/dotfiles
+cp -r ~/Apps/dzen -t ~/Documents/Github/dotfiles/scripts
 
 # save awesomewm config files to dotfiles/awesome
 cp -r ~/.config/awesome -t ~/Documents/Github/dotfiles
