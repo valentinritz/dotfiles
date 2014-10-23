@@ -174,7 +174,7 @@ globalkeys = awful.util.table.join(
 
 --launch key
 
-    awful.key({ modkey, }, "a", function () awful.util.spawn("dmenu_run -h 30 -fn 'Open Sans-10' -l 1 -w 400 -x 575 -y 100 -nb '#1a1a1a' -sb '#5599cc'") end),
+    awful.key({ modkey, }, "a", function () awful.util.spawn("dmenu_run -h 30 -fn 'Open Sans-10' -l 5 -w 1600 -x 0 -y 0 -nb '#1a1a1a' -sb '#1a1a1a' -nf '#999999'") end),
     awful.key({ modkey, }, "0", function () awful.util.spawn("xfce4-terminal -e 'vim /home/valentin/Dropbox/todo.txt'") end),
 
 -- Printscreen
@@ -183,45 +183,51 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, }, "Print", function () awful.util.spawn("scrot -s") end),
 
 -- Toggle show desktop (for current tag(s))
+
+    awful.key({ modkey, }, "Escape", function () awful.util.spawn("/home/valentin/Apps/dzen/desktopinfos/infos.sh") end),
+
+-- Toggle show desktop (for current tag(s))
 -- Source : https://awesome.naquadah.org/bugs/index.php?do=details&task_id=723
 
-    awful.key({ modkey, }, "Escape",
-      function ()
-        local curtag
-        local curtags = awful.tag.selectedlist()
-        local client
-        local clients
-        local allminimized
+    --awful.key({ modkey, }, "Escape",
+    --  function ()
+    --    local curtag
+    --    local curtags = awful.tag.selectedlist()
+    --    local client
+    --    local clients
+    --    local allminimized
 
-        for x, curtag in pairs(curtags) do
-          clients = curtag:clients()
-          for y, client in pairs(clients) do
-            if client.minimized == false then
-              allminimized = false
-              break
-            else
-              allminimized = true
-            end
-          end
+    --    for x, curtag in pairs(curtags) do
+    --      clients = curtag:clients()
+    --      for y, client in pairs(clients) do
+    --        if client.minimized == false then
+    --          allminimized = false
+    --          break
+    --        else
+    --          allminimized = true
+    --        end
+    --      end
 
-          -- If at least one client isn't minimized, minimize all clients
-          for y, client in pairs(clients) do
-            if allminimized == false then
-              client.minimized = true 
+    --      -- If at least one client isn't minimized, minimize all clients
+    --      for y, client in pairs(clients) do
+    --        if allminimized == false then
+    --          client.minimized = true 
 
-          -- Otherwise unminimize all clients
-            elseif allminimized == true then
-              client.minimized = false 
-            end
-          end
-        end
-      end
-    ),
+    --      -- Otherwise unminimize all clients
+    --        elseif allminimized == true then
+    --          client.minimized = false 
+    --        end
+    --      end
+    --    end
+    --  end
+    --),
 
 --END custom keys
 
     awful.key({ modkey, }, "j", awful.tag.viewprev ),
+    awful.key({ modkey, }, "j", function () awful.util.spawn("/home/valentin/Apps/dzen/desktopchange/desk.sh") end),
     awful.key({ modkey, }, "k", awful.tag.viewnext ),
+    awful.key({ modkey, }, "k", function () awful.util.spawn("/home/valentin/Apps/dzen/desktopchange/desk.sh") end),
     --awful.key({ modkey, }, "Escape", awful.tag.history.restore),
 
     awful.key({ modkey, }, "Left",
@@ -377,20 +383,15 @@ awful.rules.rules = {
     --   properties = { border_width = 24} },
     { rule = { name = "earthquake" },
        properties = { tag = tags[1][3]} },
-    { rule = { name = "snownews" },
+    { rule = { name = "newsbeuter" },
        properties = { tag = tags[1][3]} },
     { rule = { name = "irssi" },
-       properties = { tag = tags[1][3]} },
-    { rule = { name = "turses" },
        properties = { tag = tags[1][3]} },
     { rule = { class = "Transmission" },
        properties = { tag = tags[1][1]} },
     { rule = { class = "Vlc" },
        properties = { floating = true,
                       border_width = 0} },
-    { rule = { name = "bashrun" },
-       properties = { floating = true,
-                      border_width = 0}},
     { rule = { name = "Steam" },
        properties = { floating = true,
                       border_width = 0}},

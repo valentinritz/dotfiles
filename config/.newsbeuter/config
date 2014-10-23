@@ -1,0 +1,25 @@
+#General
+browser "firefox-nightly"
+show-read-feeds no
+show-read-articles no
+show-keymap-hint no
+feedlist-format "%t %> %u"
+
+#Podcast
+download-path "~/Musique/Podcasts/%h/%n"
+podcast-auto-enqueue yes
+
+#Keys
+bind-key o open-in-browser-and-mark-read
+bind-key j next-unread
+bind-key k prev-unread
+bind-key x quit
+
+#Colors
+color background          white   black
+color listnormal          white   black
+color listfocus           black   white
+color listnormal_unread   white   black
+color listfocus_unread    black   white
+color info                black   white
+color article             white   black

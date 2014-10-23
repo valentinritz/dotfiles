@@ -1,5 +1,3 @@
-mkdir Etudes
-mkdir Old DDG Job
 open_with gimp
 termina
 shell wine Set-up.exe 
@@ -28,7 +26,6 @@ mkdir Little Dragon
 rename 2014 - Nabuma Rubberband
 rename 2008 - All Or Nothing
 rename Nujabes
-
 help
 rename 2003 - Hydeout Productions First Collection
 rename 2003 - Metaphorical Music
@@ -38,7 +35,6 @@ rename 2005 - Modal Soul
 rename 2007 - Hydeout Productions Second Collection
 rename 2011 - Spiritual State
 mkdir test
-shell thunar
 rename time
 rename settings
 rename mpd
@@ -48,3 +44,7 @@ shell time
 terminal
 delete
 search .xinitrc
+search vimrc
+mkdir stickers_v2
+
+shell thunar

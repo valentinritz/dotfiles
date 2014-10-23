@@ -87,6 +87,9 @@ set softtabstop=2 tabstop=2 shiftwidth=2
 set ruler
 set wildignore=*.swp,*.bak
 set wildmode=longest,list
+set breakindent
+set showbreak=\ \
+set breakindentopt=...
 
 """""""""""""""""""" KEYBINDINGS
 

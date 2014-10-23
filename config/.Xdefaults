@@ -3,8 +3,6 @@
     ! URxvt.depth: 32
     *foreground: #D7D0C7
     *background: #252525
-    ! *foreground: #E8DFD6
-    ! *background: #021B21
     URxvt.cursorColor: #FFFFFF
     URxvt.cursorColor2: #252525
     URxvt.colorIT: #444
@@ -18,6 +16,7 @@
     *pointerColor2: #FFFFFF
     *internalBorder: 23
 
+    !  colors. Flashy, monokai inspired
     !black
     *color0: #252525
     *color8: #444444
@@ -42,6 +41,40 @@
     !white
     *color7:  #FFFFFF
     *color15: #878787
+
+    ! ! Colors. Less flashy
+
+    ! *.background: #1f1f1f
+    ! *.foreground: #c0b18b
+    ! *.cursorColor:#c0b18b
+    ! *.colorBD:    #c0b18b
+    ! *.colorUL:    #c0b18b
+    ! *.colorIT:    #c0b18b
+
+    ! ! BLK
+    ! *.color0:  #4a3637
+    ! *.color8:  #402e2e
+    ! ! RED
+    ! *.color1:  #d17b49
+    ! *.color9:  #ac5d2f
+    ! ! GRE
+    ! *.color2:  #7b8748
+    ! *.color10: #647035
+    ! ! YEL
+    ! *.color3:  #af865a
+    ! *.color11: #8f6840
+    ! ! BLU
+    ! *.color4:  #535c5c
+    ! *.color12: #444b4b
+    ! ! MAG
+    ! *.color5:  #775759
+    ! *.color13: #614445
+    ! ! CYA
+    ! *.color6:  #6d715e
+    ! *.color14: #585c49
+    ! ! WHI
+    ! *.color7:  #c0b18b
+    ! *.color15: #978965
 
     !Font
 

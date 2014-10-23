@@ -18,9 +18,9 @@ cp -r ~/.icons/Phosphore -t ~/Documents/Github/dotfiles/theme
 
 # save config files to dotfiles/config
 cp ~/.vimrc ~/.gvimrc ~/.zshrc ~/.Xdefaults -t ~/Documents/Github/dotfiles/config
-cp ~/.snownews/urls ~/.snownews/colors ~/.snownews/browser -t ~/Documents/Github/dotfiles/config/.snownews
+cp ~/.newsbeuter/config ~/.newsbeuter/urls -t ~/Documents/Github/dotfiles/config/.newsbeuter
 cp ~/.mpd/mpd.conf -t ~/Documents/Github/dotfiles/config/.mpd
-cp ~/.irssi/config ~/.irssi/thing.theme -t ~/Documents/Github/dotfiles/config/.config/irssi
+cp ~/.irssi/config ~/.irssi/beastie.theme -r ~/.irssi/scripts -t ~/Documents/Github/dotfiles/config/.config/irssi
 cp -r ~/.fonts/PragmataPro -t ~/Documents/Github/dotfiles/config/.fonts
 cp ~/.config/clipit/clipitrc -t ~/Documents/Github/dotfiles/config/.config/clipit
 cp ~/.config/zathura/zathurarc -t ~/Documents/Github/dotfiles/config/.config/zathura

@@ -1,3 +1,15 @@
+#
+#
+# Beastie's irssi theme.
+#
+# Thanks to crshd.
+#
+#
+# Visit irc.unixhub.net #unixhub :) 
+#
+
+
+
 # default foreground color (%N) - -1 is the "default terminal color"
 default_color = "-1";
 
@@ -12,14 +24,16 @@ abstracts = {
 
   ############# generic ###############################
 
-  indent_default = "               + ";
+  #indent_default = "               + ";
+  indent_default = "";
 
   # text to insert at the beginning of each non-message line
   # line_start = "%g//%n ";
   line_start = "";
 
   # timestamp styling, nothing by default
-  timestamp = "%K$0-%n";
+  #timestamp = "%K$0-%n";
+  timestamp = "";
 
   # any kind of text that needs hilighting, default is to bold
   hilight = "%_$*%_";
@@ -31,7 +45,8 @@ abstracts = {
   channel = "%b$*%n";
 
   # nick is printed
-  nick = "%_$*%_";
+  #nick = "%_$*%_";
+  nick = "";
 
   # nick host is printed
   nickhost = "%g$*";
@@ -67,9 +82,10 @@ abstracts = {
   ########### messages #################################
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  # msgnick = "$1-$0%K·%N %|";
-  msgnick = "%K$0%N $1 %K│ %|%N";
-  # msgnick = "%K$0%N $1 %K· %|%N";
+  # msgnick = "$1-$0%K·%N %│";
+  # msgnick = "%K$0%N $1 %K│ %│%N";
+  # msgnick = "%K$0%N $1 %K· %│%N";
+  msgnick = "%K%N $1 %K│  %N";
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1}";
@@ -94,32 +110,50 @@ abstracts = {
 
   # private message in query
   # privmsgnick = "{msgnick $*}";
-  privmsgnick = "%g<%N %|";
+  privmsgnick = " %g<%N ";
 
   # own private message in query
   #ownprivmsgnick = "{privmsgnick $*}";
-  ownprivmsgnick = "%r>%N %|";
+  ownprivmsgnick = " %r>%N ";
   #ownprivnick = "$*";
 
 
   ########## Actions (/ME stuff) #########################
+  # used internally by this theme
+  action_core = " %n$* │";
 
   # generic one that's used by most actions
-  action = "  %m$* %M* %m%|";
+  action = "{action_core $*} ";
 
   # own action, both private/public
-  # ownaction = "{action $*}";
-  ownaction = "  %m$* %M*%N%m";
+  ownaction = "{action %p$*}";
 
   # own action with target, both private/public
-  ownaction_target = "{action $*}";
+  ownaction_target = "{action_core $0}%Y:%c$1%n ";
 
   # private action sent by others
-  pvtaction = "{action $*}";
-  pvtaction_query = "{action $*}";
+  pvtaction = "%y (*) $*%n ";
+  pvtaction_query = "{action $* }";
 
   # public action sent by others
   pubaction = "{action $*}";
+
+  # generic one that's used by most actions
+  #  action = " %m$* │ %N%m";
+
+  # own action, both private/public
+  # ownaction = "{action $*}";
+  # ownaction = " %m$* │ %N%m";
+
+  # own action with target, both private/public
+  #  ownaction_target = "  {action $*}";
+
+  # private action sent by others
+  #  pvtaction = "{ $*}";
+  #  pvtaction_query = "{ $*}";
+
+  # public action sent by others
+  # pubaction = "  {action}";
 
 
   ########## other IRC events #############################
@@ -144,16 +178,16 @@ abstracts = {
   wallop_action = "%K * $*%n ";
 
   # netsplits
-  netsplit = "       %Knsplit %R< %b\"$*\"%n";
-  netjoin = "        %Knjoin %G> %b\"$*\"%n";
+  netsplit = "       %Knsplit %R│ %b\"$*\"%n";
+  netjoin = "        %Knjoin %G│ %b\"$*\"%n";
 
   # /names list
-  names_prefix = "%Y!%K!      names %Y!%n ";
+  names_prefix = "             %Y│%n ";
   names_nick = "%_$2$0%_%n$1- ";
   names_nick_op = "{names_nick $* %R}";
   names_nick_halfop = "{names_nick $* %C}";
   names_nick_voice = "{names_nick $* %K}";
-  names_users = "%Y!%K!      names %Y!%n $1";
+  names_users = "             %Y│%n $1";
   names_channel = "\"%b$*\"%n";
 
   # DCC
@@ -176,7 +210,7 @@ abstracts = {
 
   # default background for all statusbars. You can also give
   # the default foreground color for statusbar items.
-  sb_background = "%0";
+  sb_background = "%9";
 
   # default backround for "default" statusbar group
   #sb_default_bg = "%4";
@@ -197,15 +231,14 @@ abstracts = {
   topicsbstart = "%BChannel: %b\"$*";
   topicsbend = "$*%b\"";
 
-  # prompt = " %r$* »%n ";
-  prompt = "%r »%n ";
-  # prompt = " %K└╼ ";
+  # prompt = " %r» %n ";
+  sb_prompt_bg = "%n";
 
   sb = "[$*]";
   sbmode = " %K[%g%g+%n$*%K]";
   sbaway = " %g/* zZzZ */%n";
   sbservertag = ":%g$0%n";
-  sbnickmode = "...$0";
+  sbnickmode = "$0";
 
   # Usercount
   sb_usercount = "{sb %_$0%_ nicks ($1-)}";
@@ -236,16 +269,16 @@ formats = {
     line_start = "{line_start}";
     line_start_irssi = "{line_start}";
 
-    join = "%G>%K>       join %g>%n {channick $0}";
-    part = "%R<%K<       part %r<%n {channick $0}";
-    kick = "%R<%K<     kicked %r<%n {channick $0}";
-    quit = "%R<%K<       quit %r<%n {channick $0}";
+    join = "        join %g│ %n {channick $0}";
+    part = "        part %r│ %n {channick $0}";
+    kick = "      kicked %r│ %n {channick $0}";
+    quit = "        quit %r│ %n {channick $0}";
     quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
 
-    nick_changed = "%K{channick $[-13]0} %G>%n {channick $1}";
-    your_nick_changed = "%K          you %G>%n {channick $1}";
+    nick_changed = "%K{channick $[-13]0}%G│ %n {channick $1}";
+    your_nick_changed = "%K         you %G│ %n {channick $1}";
 
-    pubmsg = "{pubmsgnick $2 {pubnick \00313$[-11]0}}$1";
+    pubmsg = "{pubmsgnick $2 {pubnick \00304$[-11]0}}$1";
 
     own_msg = "{ownmsgnick $2 {ownnick $[-11]0}}$1";
     own_msg_channel = "{ownmsgnick $3 {ownnick $[-11]0}{msgchannel $1}}$2";
@@ -259,18 +292,17 @@ formats = {
 
     pubmsg_channel = "{pubmsgnick {pubnick %G$[-11]0}$2}$1";
     msg_private_query = "{privmsgnick $[-11]0}$2";
-    new_topic = "        %ctopic %K= %|%B'$2' %non %b$1%n%K[set by {nick %y$0}]";
+    new_topic = "       %ctopic %K│  %B'$2' %non %b$1%n%K[set by {nick %y$0}]";
 
-    endofnames = "%Y!%K!      names %Y!%m Total: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal%n";
+    endofnames = "       names %Y│%m  Total: {hilight $2} ops, {hilight $3} halfops, {hilight $4} voices, {hilight $5} normal%n";
   };
   "fe-common/irc" = {
-    chanmode_change = "%Y!%K!       mode %y!%n {channick $1}";
-    server_chanmode_change = "%Y!%K!       mode %y!%n {channick $1}";
+    chanmode_change = "        mode %y│ %n {channick $1}";
+    server_chanmode_change = "%        mode %y│ %n {channick $1}";
 
     own_action = "{ownaction $[-11]0} $1";
     action_private = "{pvtaction $[-11]0}$1";
     action_private_query = "{pvtaction_query $[-11]0} $2";
     action_public = "{pubaction $[-11]0}$1";
   };
-  "Irssi::Script::ichat" = { ichat_timestamp = "%Y>%K>      $1 %y>%n"; };
 };

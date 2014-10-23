@@ -1,0 +1,14 @@
+gap_x 0
+gap_y -30
+out_to_console yes
+update_interval 1
+total_run_times 5
+double_buffer yes
+minimum_size 0 0
+maximum_width 300
+own_window yes
+own_window_type override
+
+
+TEXT
+On est le ${time %d} à ${time %H:%M}.

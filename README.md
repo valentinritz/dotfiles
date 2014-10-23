@@ -1,10 +1,6 @@
 ![Desktop](https://raw.githubusercontent.com/octomwm/dotfiles/master/screenshot.png)
 Fonts are Pragamata and Droid Sans. [Wallpaper is Space Oddity by ???](http://everynicething.com/Space-Oddity).
 
-The visual style is "inspired" (hahahaha) by the wonderful screenshots by Kamiru- : [Github](https://github.com/onodera-punpun) - [reddit](http://www.reddit.com/r/unixporn/comments/29rh3h/fvwm_rounded_corners/).
-
-Differences are in the code : I only used conky.
-
 ##Setup
 
 - archlinux
@@ -15,7 +11,7 @@ Differences are in the code : I only used conky.
 - Firefox
 - urxvt
   - ranger
-  - snownews
+  - newsbeuter
   - irssi
   - ncmpcpp
 - vim
@@ -24,7 +20,7 @@ Differences are in the code : I only used conky.
 - zathura
 - inkscape
 - gimp
-- bashrun
+- dmenu
 - ...
 
 ##Links

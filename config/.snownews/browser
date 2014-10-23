@@ -1,1 +1,0 @@
-firefox-nightly -remote openURL\(%s,new-tab\)

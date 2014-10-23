@@ -112,6 +112,7 @@ channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; },
   { name = "#duckduckgo"; chatnet = "fn"; autojoin = "yes"; },
+  #{ name = "#ubuntu"; chatnet = "fn"; autojoin = "yes"; },
   { name = "#sycontent"; chatnet = "perl"; autojoin = "yes"; }
 );
 
@@ -187,7 +188,10 @@ statusbar = {
     # window_empty is printed with empty windows
     window = "{sb $winref:$tag/$itemname{sbmode $M}}";
     window_empty = "{sb $winref{sbservertag $tag}}";
-    prompt = "{prompt $[.15]itemname}";
+    #prompt = "{prompt $[.15]itemname}";
+    #prompt = "$c >> ";
+    #prompt = "$c%K            └─ ";
+    prompt = "$c %k$[-12]C %K└─ ";
     prompt_empty = "{prompt $winname}";
     topic = " $topic";
     topic_empty = " Irssi v$J - http://www.irssi.org";
@@ -205,7 +209,7 @@ statusbar = {
     # the "default statusbar" to be displayed at the bottom of the window.
     # contains all the normal items.
     window = {
-      disabled = "no";
+      disabled = "yes";
 
       # window, root
       type = "window";
@@ -224,7 +228,6 @@ statusbar = {
         window = { };
         window_empty = { };
         lag = { priority = "-1"; };
-        act = { priority = "10"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
       };
@@ -258,6 +261,7 @@ statusbar = {
         prompt_empty = { priority = "-1"; };
         # treated specially, this is the real input line.
         input = { priority = "10"; };
+        #awl_0 = { alignment = "right";};
       };
     };
 
@@ -265,19 +269,40 @@ statusbar = {
     topic = {
       type = "root";
       placement = "top";
-      position = "1";
-      visible = "always";
+      position = "0";
+      visible = "inactive";
       items = {
         topicbarstart = { priority = "100"; };
-        topic = { };
         topic_empty = { };
         topicbarend = { priority = "100"; alignment = "right"; };
       };
+      disabled = "yes";
+    };
+    awl_1 = {
+      placement = "bottom";
+      items = {
+        barstart = { priority = "100"; };
+        awl_1 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+      disabled = "yes";
+    };
+    awl_0 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+      disabled = "yes";
     };
   };
 };
 settings = {
   core = { real_name = "Unknown"; user_name = "mwm"; nick = "mwm"; };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "thing"; };
+  "fe-common/core" = { theme = "beastie"; };
+  "perl/core/scripts" = {
+    #awl_display_key = "$Q%K|%n$H$C$S";
+    awl_display_key = "▪%K";
+  };
 };

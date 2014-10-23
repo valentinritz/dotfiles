@@ -1,0 +1,13 @@
+gap_x 0
+gap_y -30
+out_to_console yes
+update_interval 3
+total_run_times 5
+double_buffer yes
+minimum_size 0 0
+maximum_width 300
+own_window yes
+own_window_type override
+
+TEXT
+${desktop}${exec /home/valentin/Apps/dzen/desktopchange/time_notif.sh}
